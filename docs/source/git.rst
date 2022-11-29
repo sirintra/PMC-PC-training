@@ -12,8 +12,7 @@ Developers can review project history to find out:
 * Who made the changes
 * Why were changes needed
 
-Note
-
+.. note::
 Git is not suited to track huge data files, binary files (.xlsx, .zip, .gz, .doc)
 
 Git repository
