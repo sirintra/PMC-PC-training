@@ -6,13 +6,13 @@ About git
 Git is the most common used open-source version control system. Version control system help developers track and manage changes made to project's files. Any ealier version of the project can be recovered at any time. 
 
 Developers can review project history to find out:
+
 * Which changes were made
 * When were the changes made
 * Who made the changes
 * Why were changes needed
 
 Note
-
 Git is not suited to track huge data files, binary files (.xlsx, .zip, .gz, .doc)
 
 Git repository
