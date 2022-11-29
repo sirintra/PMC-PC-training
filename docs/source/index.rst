@@ -14,6 +14,12 @@ Learning objectives
 * Describe Singula
 
 
+.. toctree::
+
+   git
+   usage
+   api
+
 
 
 
@@ -33,7 +39,3 @@ how to :ref:`installation` the project.
 Contents
 --------
 
-.. toctree::
-
-   usage
-   api
