@@ -11,9 +11,9 @@ GitHub
 
 
 
-.. _installation:
+.. _installationtt:
 
-Installation
+Installationtt
 ------------
 
 To use Lumache, first install it using pip:
