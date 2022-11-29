@@ -2,11 +2,11 @@ Introduction to Snakemake
 ============================
 
 
-.. code-block:: snakemake
+.. code-block:: python
 
-rule xxx
-  input: in.txt
-  output: out.txt
-  shell:
+  rule xxx:
+    input: in.txt
+    output: out.txt
+    shell:
   
   
