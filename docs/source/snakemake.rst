@@ -10,3 +10,4 @@ Introduction to Snakemake
     shell:
   
   
+`Snakemake tutorial <https://snakemake.readthedocs.io/en/stable/tutorial/basics.html>`_
