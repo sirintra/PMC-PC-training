@@ -7,14 +7,14 @@ Git is the most common used open-source version control system. Version control 
 
 GitHub
 ----------
-`GitHub <https://github.com/>`_ offers Git respository hosting service on a remote computer (cloud-based). GitHub also provides user-freindly interface to Git.
+`GitHub <https://github.com/>`_ offers Git respository hosting service on a remote computer (cloud-based). GitHub also provides user-freindly interface to Git. Git allows synchronization of git repositories (e.g. from local to remote)
 
 
 
 .. _installationtt:
 
 Installationtt
-------------
+--------------
 
 To use Lumache, first install it using pip:
 
