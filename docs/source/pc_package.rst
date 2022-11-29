@@ -11,7 +11,7 @@ PanCancer analysis package
 
 ``runSnakemake.sh``
 
-.. code-block:: console
+.. code-block:: bash
   :linenos:
 
   module load apps/singularity/3.4.2
