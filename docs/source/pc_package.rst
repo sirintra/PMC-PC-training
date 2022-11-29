@@ -2,4 +2,7 @@ PanCancer analysis package
 ===========================
 
 
-.. image:: test2.png
+.. image:: img_pipeline_overview.png
+
+
+.. image:: img_analysis_package.png
