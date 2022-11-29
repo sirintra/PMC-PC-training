@@ -1,6 +1,6 @@
 About the course
 ===================================
-This course is designed for beginners who want to understand how the PanCancer analysis workflow (_PanCancerWF <https://github.com/PMC-QUB-HTS/PanCancer_WF/>_) work. The aim of the course is to ....
+This course is designed for beginners who want to understand how the PanCancer analysis workflow (`PanCancerWF <https://github.com/PMC-QUB-HTS/PanCancer_WF/>`_) work. The aim of the course is to ....
 
 
 Outline
