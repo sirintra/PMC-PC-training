@@ -12,7 +12,10 @@ Learning objectives
 * Versioning control and code review ....Git and GitHub
 * Describe basic concepts of technoligies employed the the workflow (e.g. Snakemake, Singularity, SLURM)
 * Describe Singula
-Describe and explain Nextflow basic concepts.
+
+
+
+
 
 
 **Lumache** (/lu'make/) is a Python library for cooks and food lovers
