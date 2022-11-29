@@ -10,5 +10,7 @@ Containers provide virtualized environment: an isolated file system accessible f
 
 Two important concepts
 ======================
-Image/Recipe
-Container
+* Image: a set of layers, read-only templates.
+* Container: an instance of an image
+
+You can have many running containers of the same image.
