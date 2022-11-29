@@ -9,6 +9,7 @@ PanCancer analysis package
    :width: 500 
 
 
+``runSnakemake.sh``
 .. code-block:: bash
    :linenos:
 
