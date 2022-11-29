@@ -17,6 +17,8 @@ Learning objectives
 .. toctree::
 
    git
+   singularity
+   snakemake
    usage
    api
 
