@@ -9,7 +9,10 @@ GitHub
 ----------
 `GitHub <https://github.com/>`_ offers Git respository hosting service on a remote computer (cloud-based). GitHub also provides user-freindly interface to Git. Git allows synchronization of git repositories (e.g. from local to remote)
 
-
+Git basic terminology
+---------------------
+``commit`` 
+A commit consists of a single ot multiplr related patches. Commits are identified using ids. 
 
 .. _installationtt:
 
