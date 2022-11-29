@@ -19,6 +19,7 @@ Learning objectives
    git
    singularity
    snakemake
+   pc_package
    usage
    api
 
