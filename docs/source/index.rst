@@ -35,5 +35,6 @@ Contents
 
 .. toctree::
 
+   Git
    usage
    api
