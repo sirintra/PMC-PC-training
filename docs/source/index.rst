@@ -1,5 +1,16 @@
-Welcome to Lumache's documentation!
+About the course
 ===================================
+This course is designed for beginners who want to understand how the PanCancer analysis workflow (_PanCancerWF <https://github.com/PMC-QUB-HTS/PanCancer_WF/>_) work. The aim of the course is to ....
+
+
+Outline
+===================================
+
+
+Learning objectives
+===================================
+Describe and explain Nextflow basic concepts.
+
 
 **Lumache** (/lu'make/) is a Python library for cooks and food lovers
 that creates recipes mixing random ingredients.
