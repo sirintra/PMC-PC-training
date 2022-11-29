@@ -7,7 +7,7 @@ Git is the most common used open-source version control system. Version control 
 
 GitHub
 ----------
-`GitHub<https://github.com/>`_ offers Git respository hosting service on a remote computer (cloud-based). GitHub also provides user-freindly interface to Git.
+`GitHub <https://github.com/>`_ offers Git respository hosting service on a remote computer (cloud-based). GitHub also provides user-freindly interface to Git.
 
 
 
