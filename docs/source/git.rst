@@ -1,7 +1,7 @@
 Introduction to Git
 ====================================
 
-About git
+About Git
 ----------
 Git is the most common used open-source version control system. Version control system help developers track and manage changes made to project's files. Any ealier version of the project can be recovered at any time. 
 
@@ -13,6 +13,7 @@ Developers can review project history to find out:
 * Why were changes needed
 
 Note
+
 Git is not suited to track huge data files, binary files (.xlsx, .zip, .gz, .doc)
 
 Git repository
@@ -23,10 +24,18 @@ GitHub
 ----------
 `GitHub <https://github.com/>`_ offers Git respository hosting service on a remote computer (cloud-based). GitHub also provides user-freindly interface to Git. Git allows synchronization of git repositories (e.g. from local to remote)
 
+GitHub provides useful features like issues (thread discussions), code review, pull requests etc.
+
+`Link to PMC QUB GitHub <https://github.com/PMC-QUB-HTS>`_
+
 Git basic terminology
 ---------------------
 ``commit`` 
 A commit consists of a single ot multiplr related patches. Commits are identified using ids. 
+
+``clone``
+Clone is Creates a local copy of a project that already exists remotely. The clone includes all the project's files, history, and branches.
+
 
 .. _installationtt:
 
