@@ -2,7 +2,7 @@ Introduction to Snakemake
 ============================
 
 
-.. code-blocak:: snakemake
+.. code-block:: snakemake
 
 rule xxx
   input: in.txt
