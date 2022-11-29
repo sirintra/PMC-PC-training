@@ -13,7 +13,8 @@ Developers can review project history to find out:
 * Why were changes needed
 
 .. note::
-Git is not suited to track huge data files, binary files (.xlsx, .zip, .gz, .doc)
+   Git is not suited to track huge data files, binary files (.xlsx, .zip, .gz, .doc)
+
 
 Git repository
 ---------------
