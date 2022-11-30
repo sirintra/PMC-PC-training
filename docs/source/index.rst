@@ -1,4 +1,4 @@
-Aims of the course
+About this course
 ===================================
 This course is designed for beginners who want to understand how the PanCancer analysis workflow (`PanCancerWF <https://github.com/PMC-QUB-HTS/PanCancer_WF/>`_) work. It is designed to provide trainees with short and frequent hands-on sessions. 
 
@@ -10,13 +10,14 @@ The aims of the course are:
 
 
 Learning objectives
-===================================
+----------
 * Versioning control and code review ....Git and GitHub
 * Describe basic concepts of technoligies employed the the workflow (e.g. Snakemake, Singularity, SLURM)
 * Describe Singula
 
+
 Prerequisite / technical requirements
-===================================
+----------
 * Comfortable working with the CLI (command-line interface) in a Linux-based environment
 * Have basic knowledge of Linux command lines
 * Have access to Kelvin2 HPC
