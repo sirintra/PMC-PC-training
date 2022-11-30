@@ -15,4 +15,4 @@ A Snakemake workflow is defined by specifying rules in a Snakefile. Rules decomp
     shell:
   
   
-`Snakemake tutorial <https://snakemake.readthedocs.io/en/stable/tutorial/basics.html>`_
+`Snakemake tutorial <https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html>`_
