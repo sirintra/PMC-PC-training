@@ -38,7 +38,7 @@ Interactive sessions allow users to run interacive application directly on a com
 
 The following command launches an interactive session on Kelvin2:
 
-.. code-block:: bash
+.. code-block:: console
    
    srun --pty /bin/bash
 
@@ -46,7 +46,7 @@ The following command launches an interactive session on Kelvin2:
 To request an inteactive session with 10GB of memory and at least 4 cores:
 
 
-.. code-block:: bash
+.. code-block:: console
    
    srun --mem 10000 --mincpus 4 --pty /bin/bash
 
@@ -54,4 +54,7 @@ To request an inteactive session with 10GB of memory and at least 4 cores:
 .. note::
    An inteactive job will start immediately if requested resources are avaliable or will wait in the queue if no resources available
 
+Non-interactive jobs
+--------------------
+A batch job
 
