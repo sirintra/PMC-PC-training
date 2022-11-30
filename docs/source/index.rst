@@ -29,11 +29,10 @@ Contents
 .. toctree::
 
    git
+   kelvin
    singularity
    snakemake
    pc_package
-   usage
-   api
 
 
 .. note::
