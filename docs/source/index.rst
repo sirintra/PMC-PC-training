@@ -1,10 +1,12 @@
-About the course
+Aims of the course
 ===================================
-This course is designed for beginners who want to understand how the PanCancer analysis workflow (`PanCancerWF <https://github.com/PMC-QUB-HTS/PanCancer_WF/>`_) work. The aim of the course is to ....
+This course is designed for beginners who want to understand how the PanCancer analysis workflow (`PanCancerWF <https://github.com/PMC-QUB-HTS/PanCancer_WF/>`_) work. It is designed to provide trainees with short and frequent hands-on sessions. 
 
+The aims of the course are:
 
-Outline
-===================================
+* To provide basic understanding of the technologies (e.g. workflow, container, job scheduler) employed in the PanCancerWF and how these technologies have been put together in the PanCancerWF.
+* To provide basic understand how the PanCancerWF works on Kelvin2 HPC
+* To provide an overview of the data management and flow of input/output of the PanCancerWF on Kelvin2 HPC
 
 
 Learning objectives
@@ -13,7 +15,16 @@ Learning objectives
 * Describe basic concepts of technoligies employed the the workflow (e.g. Snakemake, Singularity, SLURM)
 * Describe Singula
 
+Prerequisite / technical requirements
+===================================
+* Comfortable working with the CLI (command-line interface) in a Linux-based environment
+* Have basic knowledge of Linux command lines
+* Have access to Kelvin2 HPC
+* Have a GitHub account
 
+
+Contents
+--------
 .. toctree::
 
    git
@@ -24,21 +35,9 @@ Learning objectives
    api
 
 
-
-
-
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
-
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
-
 .. note::
 
-   This project is under active development.
+   This training course is under development.
 
-Contents
---------
+
 
