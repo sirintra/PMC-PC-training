@@ -10,11 +10,14 @@ Module basics
 -----------------
 The module package is available on Kelvin2, allowing users to access non-standard tools or alternate versions of standard packages. This is also an alternative way to configure your environment as required by certain packages. Specific modules can be loaded and unloaded as required. 
 
-Common commands:
+**Common commands**:
 
 ``module avail`` List available packages.
+
 ``module load [modulefile]``	Loads module or specifies which dependencies have not been loaded.
+
 ``module unload [modulefile]``	Unloads specified module from environment.
+
 ``module list``	List currently loaded modules.
 
 
@@ -36,6 +39,7 @@ Interactive sessions allow users to run interacive application directly on a com
 The following command launches an interactive session on Kelvin2:
 
 .. code-block:: bash
+   
    srun --pty /bin/bash
 
 
@@ -43,6 +47,7 @@ To request an inteactive session with 10GB of memory and at least 4 cores:
 
 
 .. code-block:: bash
+   
    srun --mem 10000 --mincpus 4 --pty /bin/bash
 
 
