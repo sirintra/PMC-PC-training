@@ -17,9 +17,10 @@ You can have many running containers of the same image.
 
 
 
-accScript Singularity recipe
+``accScript`` Singularity recipe
 
-.. code-block:: console
+.. code-block:: bash
+  :linenos:
 
 Bootstrap: docker
 From: ubuntu:20.04
