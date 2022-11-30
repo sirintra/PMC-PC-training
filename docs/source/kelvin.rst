@@ -3,7 +3,7 @@ Introduction to Kelvin2 HPC
 Kelvin2 is a high-performance computing (HPC) cluster at Queen’s University Belfast (QUB). The operating system is currently CentOS Linux 7 (Core) and Slurm is currently used as a workload manager/job scheduler. The current hardware specifications are kept up-to-date `here <https://ni-hpc.ac.uk/Kelvin2/>`_
 
 
-Latest Kelvin2 training including basic Slurm commands can be found `here <https://gitlab.qub.ac.uk/qub_hpc/kelvin_training>`_.
+Learn more from `latest Kelvin2 training <https://gitlab.qub.ac.uk/qub_hpc/kelvin_training>`_
 
 
 Module basics
@@ -36,12 +36,15 @@ Interactive sessions allow users to run interacive application directly on a com
 The following command launches an interactive session on Kelvin2:
 
 .. code-block:: bash
-srun --pty /bin/bash
+   srun --pty /bin/bash
+
 
 To request an inteactive session with 10GB of memory and at least 4 cores:
 
+
 .. code-block:: bash
-srun --mem 10000 --mincpus 4 --pty /bin/bash
+   srun --mem 10000 --mincpus 4 --pty /bin/bash
+
 
 .. note::
    An inteactive job will start immediately if requested resources are avaliable or will wait in the queue if no resources available
