@@ -5,11 +5,11 @@ Introduction to Singularity
 Singularity is an open-source project designed to run on HPC clusters
 
 What are containers
-====================
+--------------------
 Containers provide virtualized environment: an isolated file system accessible from a host computer
 
 Two important concepts
-======================
+-----------------------
 * Image: a set of layers, read-only templates.
 * Container: an instance of an image
 
