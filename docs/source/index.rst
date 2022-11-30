@@ -10,14 +10,14 @@ The aims of the course are:
 
 
 Learning objectives
-----------
+-------------------
 * Versioning control and code review ....Git and GitHub
 * Describe basic concepts of technoligies employed the the workflow (e.g. Snakemake, Singularity, SLURM)
 * Describe Singula
 
 
 Prerequisite / technical requirements
-----------
+--------------------------------------
 * Comfortable working with the CLI (command-line interface) in a Linux-based environment
 * Have basic knowledge of Linux command lines
 * Have access to Kelvin2 HPC
