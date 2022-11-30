@@ -56,5 +56,19 @@ To request an inteactive session with 10GB of memory and at least 4 cores:
 
 Non-interactive jobs
 --------------------
-A batch job
+
+**Common commands**:
+
+``sbatch [jobscript]`` submit a job script to the job queue.
+
+``squeue -u [userid]``	view status of jobs submitted by a user
+
+``scancel -j [jobid]``	cancel a pending or running job.
+
+``scancel -u [userid]``	cancel all jobs submitted by a user
+
+
+.. note::
+   ``squeue`` lists jobs exist on the system. The ST field shows job states (R=running, PD=pending, F=failed)
+
 
