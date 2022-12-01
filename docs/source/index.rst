@@ -24,20 +24,21 @@ Prerequisite / technical requirements
 * Have a GitHub account
 
 
+.. note::
+
+   This training course is under development.
+
+
 Contents
 --------
 .. toctree::
 
+   index
    git
    kelvin
    singularity
    snakemake
    pc_package
-
-
-.. note::
-
-   This training course is under development.
 
 
 
