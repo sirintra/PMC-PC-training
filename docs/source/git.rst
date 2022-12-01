@@ -35,15 +35,3 @@ A commit consists of a single ot multiplr related patches. Commits are identifie
 
 ``clone``
 Clone is Creates a local copy of a project that already exists remotely. The clone includes all the project's files, history, and branches.
-
-
-.. _installationtt:
-
-Installationtt
---------------
-
-To use Lumache, first install it using pip:
-
-.. code-block:: console
-
-   (.venv) $ pip install lumache
