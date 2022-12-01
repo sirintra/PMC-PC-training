@@ -88,9 +88,6 @@ sacct
 
 ``sacct`` displays details of a completed job including amount of resources used (e.g. CPU, Memory, runtime).
 
-``scontrol`` view or modify configuration (e.g. partition, node) and state of submitted jobs.
-
-
 .. tip::
    Sometimes, it can be useful to know the amount of resources to complete a job, so that we can optimise the resource requirment for that type of job.
 
@@ -105,6 +102,26 @@ To check resource usage of a completed job used the ``sacct`` command.
    Note that you will need to know the JobID of the job you would like to check. 
    `More details and options on sacct <https://slurm.schedmd.com/sacct.html>`_
 
+
+scontrol
+---------
+
+``scontrol`` view or modify configuration (e.g. partition, node) and state of submitted jobs.
+
+Eaxmaple: To change a requested partion of a submitted job to ``k2-hipri`` (e.g. from ``k2-medpri``):
+
+
+.. code-block:: console
+
+   scontrol update jobid=[jobid] Partition=k2-hipri TimeLimit=02:59:00
+
+
+.. tip::
+   If you have a submitted job that requests to be run on a ``medpri`` partition and it has been waiting in the queue for too long because the cluster is busy, sometimes change partition to ``hipri`` will get to job to be processed quicker (Note: it would only work if the job is completed within 3 hours)   
+
+
+
+`More details and options on sontrol <https://slurm.schedmd.com/scontrol.html>`_
 
 
 
