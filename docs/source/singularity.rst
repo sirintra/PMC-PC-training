@@ -20,30 +20,9 @@ Image
 Singularity image is a read-only file (typically with .sif extension). A Singularity image can be created with the ``singularity build`` command, either from a a `container recipe <https://docs.sylabs.io/guides/2.6/user-guide/container_recipes.html>`_ or from a container repository (e.g. `Docker Hub <https://hub.docker.com/>`_ , `BioContainers <https://biocontainers.pro/>`_).
 
 
-.. note::
-   root account (or sudo) is required when creating a Singularity image with the ``singularity build`` command
-   
-   
-.. tip::
-   Alternatively, a Singularity image can be pulled from a URI using the ``singularity pull`` command.
-   
-   
-An example of usage of `singularity pull <https://docs.sylabs.io/guides/3.7/user-guide/cli/singularity_pull.html>`_
+An example of a Singularity recipe file:
 
-.. code-block:: bash
-
-   singularity pull docker://[USER NAME]/[IMAGE NAME]:[TAG]
-   
-
-Container
-=========
-* Container: an instance of an image
-
-You can have many running containers of the same image.
-
-
-
-``accScript`` Singularity recipe (`accScripts_v1.3.def <https://bitbucket.org/sirintra/qub_pmc_wf/src/master/recipe_sigularity/accScripts/v1.3/accScripts_v1.3.def>`_)
+`accScripts_v1.3.def <https://bitbucket.org/sirintra/qub_pmc_wf/src/master/recipe_sigularity/accScripts/v1.3/accScripts_v1.3.def>`_)
 
 .. code-block:: console
   :linenos:
@@ -64,3 +43,38 @@ You can have many running containers of the same image.
      export LC_ALL=C
   %runscript
      $@
+
+
+.. note::
+   root account (or sudo) is required when creating a Singularity image with the ``singularity build`` command
+   
+   
+.. tip::
+   Alternatively, a Singularity image can be pulled from a URI using the ``singularity pull`` command.
+   
+   
+An example usage of `singularity pull <https://docs.sylabs.io/guides/3.7/user-guide/cli/singularity_pull.html>`_
+
+.. code-block:: bash
+
+   singularity pull docker://[USER NAME]/[IMAGE NAME]:[TAG]
+   
+
+EXCERCISE
+---------
+
+Create a Singularity image of `FASTQC <https://www.bioinformatics.babraham.ac.uk/projects/fastqc/>`_:
+
+.. code-block:: bash
+
+   singularity pull docker://biocontainers/fastqc:v0.11.9_cv8
+
+
+Container
+=========
+* Container: an instance of an image
+
+You can have many running containers of the same image.
+
+
+
