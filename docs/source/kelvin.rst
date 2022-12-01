@@ -85,18 +85,18 @@ Non-interactive jobs
 ``scontrol`` view or modify configuration (e.g. partition, node) and state of submitted jobs.
 
 
-.. note::
-
 Sometimes, it can be useful to know the amount of resources to complete a job, so that we can optimise the resource requirment for that type of job.
 
-To check resource usage of a completed job used the ``sacct`` command. Note that you will need to know the JobID of the job you would like to check. 
+To check resource usage of a completed job used the ``sacct`` command. 
 
 .. code-block:: console
    
    sacct -j [jobid] --format="JobID,Jobname,State,partition,elapsed,AllocCPUS,nnodes,MaxRSS,CPUTime"
    
-
-`More details and options on sacct <https://slurm.schedmd.com/sacct.html>`_
+   
+.. note::   
+   Note that you will need to know the JobID of the job you would like to check. 
+   `More details and options on sacct <https://slurm.schedmd.com/sacct.html>`_
 
 
 
