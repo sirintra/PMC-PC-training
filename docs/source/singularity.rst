@@ -20,9 +20,12 @@ Image
 Singularity image is a read-only file (typically with .sif extension). A Singularity image can be created with the ``singularity build`` command, either from a a `container recipe <https://docs.sylabs.io/guides/2.6/user-guide/container_recipes.html>`_ or from a container repository (e.g. `Docker Hub <https://hub.docker.com/>`_ , `BioContainers <https://biocontainers.pro/>`_).
 
 
-An example of a Singularity recipe file:
+Example of recipe
+------------------
 
-`accScripts_v1.3.def <https://bitbucket.org/sirintra/qub_pmc_wf/src/master/recipe_sigularity/accScripts/v1.3/accScripts_v1.3.def>`_)
+An example of a Singularity recipe file is shown below:
+
+`accScripts_v1.3.def <https://bitbucket.org/sirintra/qub_pmc_wf/src/master/recipe_sigularity/accScripts/v1.3/accScripts_v1.3.def>`_
 
 .. code-block:: console
   :linenos:
