@@ -52,7 +52,7 @@ Here is the list of partitions available on Kelvin2 and their constraints (as of
 
 To request a ``k2-medpri`` partition with a spefic runtime for your job, add the following lines into your job script:
 
-.. code-block:: console
+.. code-block:: bash
    
    #!/bin/bash
    #SBATCH --time=10:30:00
