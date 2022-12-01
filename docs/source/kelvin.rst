@@ -39,14 +39,24 @@ Partitions
 
 When a user submits a job to a specific partiton, the scheduler determines if the requested hardware/time requirements of the job match up with the resources the partition provides. If it does, the job is executed if there are available resources. If there are no available resources, the job will be held until the next scheduler iteration, to see if resources have become available.
 
-For Kelvin2, the default runtime for a submitted job is 3 hours (*hipri partition). For a longer runtime time, you need to specify partition that facilitates longer runtime. 
+For Kelvin2, the default runtime for a submitted job is 3 hours (k2-hipri partition). For a longer runtime time, you need to specify partition that facilitates longer runtime. 
 
 Here is the list of partitions available on Kelvin2 and their constraints (as of 1 Dec 2022):
 
 .. image:: partitions_kelvin2_dec2022.png
   :width: 500
 
+.. tip::
+   Specify ``k2-medpri`` partition if your job needs to be run longer than 3 hours and would finish within 24 hours.
+   
 
+To request a ``k2-medpri`` partition with a spefic runtime for your job, add the following lines into your job script:
+
+.. code-block:: console
+   
+   #!/bin/bash
+   #SBATCH --time=10:30:00
+   #SBATCH --partition=k2-medpri
 
 
 Launch interactive session
