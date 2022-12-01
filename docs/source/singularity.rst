@@ -45,7 +45,7 @@ You can have many running containers of the same image.
 
 ``accScript`` Singularity recipe (`accScripts_v1.3.def <https://bitbucket.org/sirintra/qub_pmc_wf/src/master/recipe_sigularity/accScripts/v1.3/accScripts_v1.3.def>`_)
 
-.. code-block:: yaml
+.. code-block:: console
   :linenos:
   
   Bootstrap: docker
