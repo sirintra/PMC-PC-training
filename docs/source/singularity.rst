@@ -44,21 +44,21 @@ You can have many running containers of the same image.
 
 ``accScript`` Singularity recipe
 
-.. code-block:: bash
+.. code-block:: yaml
   :linenos:
-Bootstrap: docker
-From: ubuntu:20.04
-%labels
-	Maintainer Sirintra Nakjang
-	Version v1.3
-%files
-	scripts/* /opt
-%post
-	apt-get -y update
-	apt-get -y install python2.7
-	apt-get -y install samtools
-	chmod 777 /opt/*
-%environment
-	export LC_ALL=C
-%runscript
-	$@
+  Bootstrap: docker
+  From: ubuntu:20.04
+  %labels
+     Maintainer Sirintra Nakjang
+     Version v1.3
+  %files
+     scripts/* /opt
+  %post
+     apt-get -y update
+     apt-get -y install python2.7
+     apt-get -y install samtools
+     chmod 777 /opt/*
+  %environment
+     export LC_ALL=C
+  %runscript
+     $@
