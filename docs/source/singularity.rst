@@ -8,14 +8,14 @@ Singularity is an open-source project designed to run on HPC clusters as it can 
 What are containers
 *********************
 
-Containers provide virtualized environment: an isolated file system accessible from a host computer
+Containers provide a minimal virtualized environment: an isolated file system accessible from a host computer. Containerization allows controlling of sofeware installation and dependencies. 
 
 Two important concepts
 ***********************
 
 Image
 =====
-* Image: a set of layers, read-only templates.
+Image is a set of layers, read-only templates.
 
 Singularity image is a read-only file (typically with .sif extension). A Singularity image can be created with the ``singularity build`` command, either from a a `container recipe <https://docs.sylabs.io/guides/2.6/user-guide/container_recipes.html>`_ or from a container repository (e.g. `Docker Hub <https://hub.docker.com/>`_ , `BioContainers <https://biocontainers.pro/>`_).
 
@@ -75,9 +75,24 @@ Create a Singularity image of `FASTQC <https://www.bioinformatics.babraham.ac.uk
 
 Container
 =========
-* Container: an instance of an image
+Container is an instance of an image. You can have multiple running containers of the same image.
 
-You can have many running containers of the same image.
+
+Running a Singularity container
+--------------------------------
+
+Once we have a Singularity image file, a container of that image can be started in multiple ways:
+
+``singularity run`` run the user-defined default command within a container
+
+``singularity exec`` run a specified command within a container
+
+``singularity shell`` generate an interactive shell within a container of the specified image
+
+
+.. Note::
+   It can be helpful to have a shell inside the container in order to debug or inspect an image
+
 
 
 
