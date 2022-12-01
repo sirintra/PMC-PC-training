@@ -6,6 +6,11 @@ Kelvin2 is a high-performance computing (HPC) cluster at Queen’s University Be
 Learn more from `latest Kelvin2 training <https://gitlab.qub.ac.uk/qub_hpc/kelvin_training>`_
 
 
+Partitions
+-----------
+
+
+
 Module basics
 -----------------
 The module package is available on Kelvin2, allowing users to access non-standard tools or alternate versions of standard packages. This is also an alternative way to configure your environment as required by certain packages. Specific modules can be loaded and unloaded as required. 
@@ -59,9 +64,9 @@ Non-interactive jobs
 
 **Common commands**:
 
-``sbatch [jobscript]`` submit a job script to the job queue.
+``sbatch [jobscript]`` submit a job script to the job queue. (A JobID will be printed out on your terminal upon a job submission)
 
-``squeue -u [userid]``	view status of jobs submitted by a user
+``squeue -u [userid]``	view status of jobs submitted by a user (i.e. Job ID, Job Name,  Job State (ST))
 
 ``scancel -j [jobid]``	cancel a pending or running job.
 
@@ -70,5 +75,37 @@ Non-interactive jobs
 
 .. note::
    ``squeue`` lists jobs exist on the system. The ST field shows job states (R=running, PD=pending, F=failed)
+   
+   
+  
+**Useful commands**:
+
+``sacct`` displays details of a completed job including amount of resources used (e.g. CPU, Memory, runtime).
+
+``scontrol`` view or modify configuration (e.g. partition, node) and state of submitted jobs.
+
+
+.. note::
+
+Sometimes, it can be useful to know the amount of resources to complete a job, so that we can optimise the resource requirment for that type of job.
+
+To check resource usage of a completed job used the ``sacct`` command. Note that you will need to know the JobID of the job you would like to check. 
+
+.. code-block:: console
+   
+   sacct -j [jobid] --format="JobID,Jobname,State,partition,elapsed,AllocCPUS,nnodes,MaxRSS,CPUTime"
+   
+
+`More details and options on sacct <https://slurm.schedmd.com/sacct.html>`_
+
+
+
+
+
+
+   
+
+
+
 
 
