@@ -6,10 +6,6 @@ Kelvin2 is a high-performance computing (HPC) cluster at Queen’s University Be
 Learn more from `latest Kelvin2 training <https://gitlab.qub.ac.uk/qub_hpc/kelvin_training>`_
 
 
-Partitions
-************
-
-
 
 Module basics
 **************
@@ -35,6 +31,22 @@ Slurm key functions:
 * it provides a framework for starting, executing, and monitoring work (normally a parallel job) on the set of allocated nodes. 
 * it allocates access to resources (compute nodes) to users for some duration of time so they can perform work.
 * it resolves contention for resources by managing a queue of pending work.
+
+
+Partitions
+************
+`Partitions <https://slurm.schedmd.com/quickstart.html>`_ can be considered as job queues. Partitions group nodes into logical sets. Each of which has assortment of constraints such as job size limit, job time limit, users permitted to use it, etc. To some extent, jobs are priortised according to the amount of resources requested or partition requested. 
+
+When a user submits a job to a specific partiton, the scheduler determines if the requested hardware/time requirements of the job match up with the resources the partition provides. If it does, the job is executed if there are available resources. If there are no available resources, the job will be held until the next scheduler iteration, to see if resources have become available.
+
+For Kelvin2, the default runtime for a submitted job is 3 hours (*hipri partition). For a longer runtime time, you need to specify partition that facilitates longer runtime. 
+
+Here is the list of partitions available on Kelvin2 and their constraints (as of 1 Dec 2022):
+
+.. image:: partitions_kelvin2_dec2022.png
+  :width: 500
+
+
 
 
 Launch interactive session
