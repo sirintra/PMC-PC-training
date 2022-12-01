@@ -33,7 +33,6 @@ Contents
 --------
 .. toctree::
 
-   index
    git
    kelvin
    singularity
