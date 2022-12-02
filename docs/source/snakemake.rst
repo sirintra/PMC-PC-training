@@ -9,10 +9,20 @@ A Snakemake workflow is defined by specifying rules in a Snakefile. Rules decomp
 
 .. code-block:: python
 
-  rule xxx:
-    input: in.txt
-    output: out.txt
+  rule step1:
+    input: 
+         input.txt
+    output: 
+         output.txt
     shell:
-  
+         'cat {input} > {output}'
+  rule step2:
+    input: 
+         output.txt
+    output:
+         output2.txt
+    shell:
+         'head -n1 {input} > {output}'
+    
   
 `Snakemake tutorial <https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html>`_
