@@ -93,6 +93,10 @@ Once we have a Singularity image file, a container of that image can be started 
 .. Note::
    It can be helpful to have a shell inside the container in order to debug or inspect an image
 
+Read/Write data outside of container 
+************************************
 
+Singularity allows you to map directories on your host system to directories within your container using `bind mounts <https://docs.sylabs.io/guides/3.0/user-guide/bind_paths_and_mounts.html>`_. This allows you to read and write data on the host system with ease.
 
+By default, Singularity automatically binds of the current folder on the host system as a working directory of the container. 
 
