@@ -17,7 +17,7 @@ Image
 =====
 Image is a set of layers, read-only templates.
 
-Singularity image is a read-only file (typically with .sif extension). A Singularity image can be created with the ``singularity build`` command, either from a a `container recipe <https://docs.sylabs.io/guides/2.6/user-guide/container_recipes.html>`_ or from a container repository (e.g. `Docker Hub <https://hub.docker.com/>`_ , `BioContainers <https://biocontainers.pro/>`_).
+Singularity image is a read-only file (typically with .sif or .img extension). A Singularity image can be created with the ``singularity build`` command, either from a a `container recipe <https://docs.sylabs.io/guides/2.6/user-guide/container_recipes.html>`_ or from a container repository (e.g. `Docker Hub <https://hub.docker.com/>`_ , `BioContainers <https://biocontainers.pro/>`_).
 
 
 Example of recipe
@@ -61,6 +61,7 @@ An example usage of `singularity pull <https://docs.sylabs.io/guides/3.7/user-gu
 .. code-block:: bash
 
    singularity pull docker://[USER NAME]/[IMAGE NAME]:[TAG]
+
    
 
 EXCERCISE
@@ -98,5 +99,22 @@ Read/Write data outside of container
 
 Singularity allows you to map directories on your host system to directories within your container using `bind mounts <https://docs.sylabs.io/guides/3.0/user-guide/bind_paths_and_mounts.html>`_. This allows you to read and write data on the host system with ease.
 
-By default, Singularity automatically binds of the current folder on the host system as a working directory of the container. 
+By default, Singularity binds your home directory and a number of paths in the root directory to the container.  Here is a full list of paths included automatically inside each container: ``$PWD``, ``$HOME``, ``/tmp``, ``/proc``, ``/sys``, ``/dev`` 
 
+To request additional bind paths with the container, use ``--bind`` option. The Singularity action commands (``run``, ``exec``, ``shell` and ``instance start`` will accept the ``--bind`` command-line option to specify bind paths.
+
+Example binding ``/data`` on the host to ``/mnt`` in the container
+
+.. code-block:: bash
+
+   singularity exec --bind /data:/mnt my_container.sif
+   
+
+To bind multiple directpries in a single command:
+ 
+.. code-block:: bash
+
+   singularity shell --bind /opt,/data:/mnt my_container.sif
+   
+  
+This will bind ``/opt`` on the host to ``/opt`` in the container and ``/data`` on the host to ``/mnt`` in the container.
