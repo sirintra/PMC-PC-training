@@ -56,7 +56,28 @@ Target rule
 
 Target rule is the rule that Snakemake focus on when executing a Snakefile. When a workflow is executed, Snakemake will focus on producing output/target(s) defined in the target rule by create a sequence of jobs that dependent on each other. 
 
-By default, if no target rule is specified, Snakemake will define the first rule of the sankefile as the target. Target rule defines a collection of final outputs expected from the workflow.
+By default, if no target rule is specified, Snakemake will use the first rule of the snakefile as the target. In the nutshell, target rule should define a collection of final outputs expected from the workflow.
+
+Defing a target rule
+
+.. code-block:: python
+
+   rule all:
+     input:
+        'qc.out',
+        'snv.out',
+        'cnv.out'
+
+
+
+.. Note::
+
+   Snakemake will execute any rule which can produce an output which a target rule requires as its input
+
+
+.. Tip::
+
+   To run multiple anlaysis tasks (QC, SNV calling, CNV identification etc.) in parallel, we just need to include final output files from each task as targets in a target rule.
 
 
  
