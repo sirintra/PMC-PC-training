@@ -64,8 +64,8 @@ An example usage of `singularity pull <https://docs.sylabs.io/guides/3.7/user-gu
 
    
 
-EXCERCISE
----------
+EXCERCISE 1
+-----------
 
 * Create a Singularity image of `FASTQC <https://www.bioinformatics.babraham.ac.uk/projects/fastqc/>`_:
 
@@ -95,8 +95,8 @@ Once we have a Singularity image file, a container of that image can be started 
    It can be helpful to have a shell inside the container in order to debug or inspect an image
    
    
-EXCERCISE
----------
+EXCERCISE 2
+-----------
 
 * Check the version of FASTQC installed in the Singularity image created. 
  
@@ -127,8 +127,8 @@ To bind multiple directpries in a single command:
 This will bind ``/opt`` on the host to ``/opt`` in the container and ``/data`` on the host to ``/mnt`` in the container.
 
 
-EXCERCISE
----------
+EXCERCISE 3
+-----------
 
 * Run FASTQC from a fastqc container on a fastq file
 
