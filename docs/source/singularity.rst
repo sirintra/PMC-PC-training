@@ -128,7 +128,7 @@ This will bind ``/opt`` on the host to ``/opt`` in the container and ``/data`` o
 
 
 EXCERCISE 3
------------
+===========
 
 * Run FASTQC from a fastqc container on a fastq file
 
