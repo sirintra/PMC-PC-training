@@ -9,7 +9,7 @@ Learn more from `latest Kelvin2 training <https://gitlab.qub.ac.uk/qub_hpc/kelvi
 
 Module basics
 **************
-The module package is available on Kelvin2, allowing users to access non-standard tools or alternate versions of standard packages. This is also an alternative way to configure your environment as required by certain packages. Specific modules can be loaded and unloaded as required. 
+The ``module`` package is available on Kelvin2, allowing users to access non-standard tools or alternate versions of standard packages. This is also an alternative way to configure your environment as required by certain packages. Specific modules can be loaded and unloaded as required. 
 
 **Common commands**:
 
@@ -24,22 +24,22 @@ The module package is available on Kelvin2, allowing users to access non-standar
 
 slurm basics
 **************
-`slurm <https://slurm.schedmd.com/documentation.html>`_ is a job scheduling system as well as workload manager for Linux cluster. 
+`slurm <https://slurm.schedmd.com/documentation.html>`_ is a job scheduling system as well as workload manager for Linux clusters. 
 
 Slurm key functions:
 
-* it provides a framework for starting, executing, and monitoring work (normally a parallel job) on the set of allocated nodes. 
-* it allocates access to resources (compute nodes) to users for some duration of time so they can perform work.
-* it resolves contention for resources by managing a queue of pending work.
+* provides a framework for starting, executing, and monitoring work (normally a set of parallelisable jobs) on a set of allocated nodes. 
+* allocates access to resources (compute nodes) to users for some duration of time so they can perform work.
+* resolves contention for resources by managing a queue of pending work.
 
 
 Partitions
 ************
-`Partitions <https://slurm.schedmd.com/quickstart.html>`_ can be considered as job queues. Partitions group nodes into logical sets. Each of which has assortment of constraints such as job size limit, job time limit, users permitted to use it, etc. To some extent, jobs are priortised according to the amount of resources requested or partition requested. 
+`Partitions <https://slurm.schedmd.com/quickstart.html>`_ can be considered as independent job queues. Partitions group nodes into logical sets, each of which has an assortment of constraints such as: job size limit, job time limit, permitted users, etc. To some extent, jobs are priortised according to the amount of resources requested or partition requested. 
 
-When a user submits a job to a specific partiton, the scheduler determines if the requested hardware/time requirements of the job match up with the resources the partition provides. If it does, the job is executed if there are available resources. If there are no available resources, the job will be held until the next scheduler iteration, to see if resources have become available.
+When a user submits a job to a specific partiton, the scheduler determines if the requested hardware/time requirements of the job match up with the resources that the partition provides. If a match can be made, then the job is executed when there are available resources. If there are no available resources, then the job will be held until the next scheduler iteration to see whether resources have become available.
 
-For Kelvin2, the default runtime for a submitted job is 3 hours (k2-hipri partition). For a longer runtime time, you need to specify partition that facilitates longer runtime. 
+For Kelvin2, the default maximum runtime for a submitted job is 3 hours (k2-hipri partition). If a job takes longer than the maximum time allowed, then it will be terminated. For a longer runtime time, you must specify a partition that facilitates a longer runtime. 
 
 Here is the list of partitions available on Kelvin2 and their constraints (as of 1 Dec 2022):
 
@@ -61,7 +61,7 @@ To request a ``k2-medpri`` partition with a spefic runtime for your job, add the
 
 Launch interactive session
 ****************************
-Interactive sessions allow users to run interacive application directly on a compute node. Users can specify resources required.
+Interactive sessions allow users to run interactive application directly on a compute node. Users can specify resources required.
 
 The following command launches an interactive session on Kelvin2:
 
@@ -79,7 +79,7 @@ To request an inteactive session with 10GB of memory and at least 4 cores:
 
 
 .. note::
-   An inteactive job will start immediately if requested resources are avaliable or will wait in the queue if no resources available
+   An interactive job will start immediately if the requested resources are avaliable. Otherwise, it will wait in the queue.
 
 Non-interactive jobs
 ***********************
@@ -88,17 +88,17 @@ Non-interactive jobs
 Common commands:
 ================
 
-``sbatch [jobscript]`` submit a job script to the job queue. (A JobID will be printed out on your terminal upon a job submission)
+``sbatch [jobscript]`` submit a job script to the job queue. (A Job ID will be printed out on your terminal upon a job submission)
 
-``squeue -u [userid]``	view status of jobs submitted by a user (i.e. Job ID, Job Name,  Job State (ST))
+``squeue -u [userid]``	view status of jobs submitted by a user (i.e. Job ID, Job Name, Job State (ST))
 
-``scancel -j [jobid]``	cancel a pending or running job.
+``scancel -j [jobid]``	cancel a pending or running job
 
 ``scancel -u [userid]``	cancel all jobs submitted by a user
 
 
 .. note::
-   ``squeue`` lists jobs exist on the system. The ST field shows job states (R=running, PD=pending, F=failed)
+   ``squeue`` lists jobs existing on the system. The ST field shows job states (R=running, PD=pending, F=failed)
    
    
   
@@ -108,10 +108,10 @@ Useful commands:
 sacct
 ------
 
-``sacct`` displays details of a completed job including amount of resources used (e.g. CPU, Memory, runtime).
+``sacct`` displays details of a completed job, including the amount of resources used (e.g. CPU, Memory, runtime).
 
 .. tip::
-   Sometimes, it can be useful to know the amount of resources to complete a job, so that we can optimise the resource requirment for that type of job.
+   Sometimes, it can be useful to know the amount of resources required to complete a job. This is so that we can optimise the resource allocations for that type of job in future. For example, if we see that a particular type of job never uses more than 2GB of RAM, then we can assign it to smaller compute nodes.
 
 To check resource usage of a completed job used the ``sacct`` command. 
 
@@ -139,7 +139,7 @@ Eaxmaple: To change a requested partion of a submitted job to ``k2-hipri`` (e.g.
 
 
 .. tip::
-   If you have a submitted job that requests to be run on a ``medpri`` partition and it has been waiting in the queue for too long because the cluster is busy, sometimes change partition to ``hipri`` will get to job to be processed quicker (Note: it would only work if the job is completed within 3 hours)   
+   If you have a submitted job that requests to be run on a ``medpri`` partition and it has been waiting in the queue for too long because the cluster is busy, sometimes changing the partition to ``hipri`` will allow the job to be processed more quickly (Note: this will only work if the job can complete within 3 hours)   
 
 
 
