@@ -11,31 +11,62 @@ A Snakemake workflow is defined by specifying rules in a Snakefile. Rules decomp
 
 Basic workflow definition
 ==========================
-A Snakemake workflow defines a data analysis in terms of `rules <https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html>`_ that are specified in the Snakefile. Most commonly, rules consist of a name, input files, output files, and a shell command to generate the output from the input:
+A Snakemake workflow defines a data analysis in terms of `rules <https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html>`_. Snakefile typically refers to a file defining Snakemake rules. Most commonly, rules consist of a name, input files, output files, and a shell command to generate the output from the input. 
 
 
 .. code-block:: python
    :linenos:
    
-  rule step1:
-    input: 
+   rule step1:
+     input: 
          'input.txt'
-    output: 
+     output: 
          'output1.txt'
-    shell:
+     shell:
          'cat {input} > {output}'
-  rule step2:
-    input: 
+   rule step2:
+     input: 
          'output1.txt'
-    output:
+     output:
         'output2.txt'
-    shell:
+     shell:
          'head -n1 {input} > {output}'
  
- 
+
+Multiple input or output files can be referred by index or by name.
+
+.. code-block:: python
+   :linenos:
+   
+   rule step1:
+     input: 
+         'input1.txt',
+         'input2.txt'
+     output: 
+         'output1.txt'
+     shell:
+         'cat {input[0]} {input[1]} > {output}'
+       
+
+Name input and output files:
+
+.. code-block:: python
+   :linenos:
+   
+   rule step1:
+     input: 
+         a='input1.txt',
+         b='input2.txt'
+     output: 
+         o='output1.txt'
+     shell:
+         'cat {input.a} {input.b} > {output.o}'
+
+
 Target rule
 ==========================     
-Snakemake dependencies are determined top-down. Dependencies bewtween rules are determined by matching input/output file names.
+Snakemake dependencies are determined top-down. Dependencies between rules are determined by matching input/output file names.
+
 By default snakemake executes the first rule in the snakefile. 
 if no target is given at the command line, Snakemake will define the first rule of the Snakefile as the target.  Hence, it is best practice to have a rule all at the top of the workflow which has all typically desired target files as input files.
       
