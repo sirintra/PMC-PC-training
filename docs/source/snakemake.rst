@@ -11,8 +11,11 @@ A Snakemake workflow is defined by specifying rules in a Snakefile. Rules decomp
 
 Basic workflow definition
 ==========================
-A Snakemake workflow defines a data analysis in terms of `rules <https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html>`_. Snakefile typically refers to a file defining Snakemake rules. Most commonly, rules consist of a name, input files, output files, and a shell command to generate the output from the input. 
+A Snakemake workflow defines a data analysis in terms of `rules <https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html>`_. ``Snakefile`` typically refers to a file containing a collection of Snakemake rules. Most commonly, rules consist of a name, input files, output files, and a shell command to generate the output from the input. 
 
+Snakemake dependencies are determined top-down. Dependencies between rules are determined by matching input/output file names.
+
+Example Snakemake pipeline:
 
 .. code-block:: python
    :linenos:
@@ -33,7 +36,18 @@ A Snakemake workflow defines a data analysis in terms of `rules <https://snakema
          'head -n1 {input} > {output}'
  
 
-Multiple input or output files can be referred by index or by name.
+.. warning::
+
+   Correct indentation is important. Just like Python, indentition matter in Snakemake.
+   Snakemake uses the indentiation to work out different components of each rule.
+
+
+
+The Input and Output arguments
+==============================
+Snakemake rules can have as many ``input`` and ``output`` files as required by a rule.
+
+Multiple input or output files can be referred to either by index or by name.
 
 .. code-block:: python
    :linenos:
@@ -62,12 +76,17 @@ Name input and output files:
      shell:
          'cat {input.a} {input.b} > {output.o}'
 
+.. warning::
+
+   It is important to have quotations aoround each of ``input`` and ``output`` paths, and to separate each of the multiple inputs and outputs with a comma ``,``.
+
 
 Target rule
 ==========================     
-Snakemake dependencies are determined top-down. Dependencies between rules are determined by matching input/output file names.
+
 
 By default snakemake executes the first rule in the snakefile. 
+
 if no target is given at the command line, Snakemake will define the first rule of the Snakefile as the target.  Hence, it is best practice to have a rule all at the top of the workflow which has all typically desired target files as input files.
       
  
