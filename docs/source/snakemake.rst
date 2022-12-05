@@ -13,7 +13,6 @@ Basic workflow definition
 ==========================
 A Snakemake workflow defines a data analysis in terms of `rules <https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html>`_. ``Snakefile`` typically refers to a file containing a collection of Snakemake rules. Most commonly, rules consist of a name, input files, output files, and a shell command to generate the output from the input. 
 
-Snakemake dependencies are determined top-down. Dependencies between rules are determined by matching input/output file names.
 
 Example Snakemake pipeline:
 
@@ -42,9 +41,28 @@ Example Snakemake pipeline:
    Snakemake uses the indentiation to work out different components of each rule.
 
 
+Dependencies between rules
+==========================
 
+Dependencies between rules are determined by matching input/output file names. The order of rules matters here as Snakemake as dependencies are determined top-down. 
+
+From the example code above, the two rules have a dependent relationship where ``step2`` is dependent on ``step1``. This is because the output of ``step1`` is an input to ``step2`` rule. 
+
+Given a set of targets (outputs), Snakemake will find a composition of rules to create them. For a given target, Snakemake identifies the rule that produces the target output, if the input files of that rule is missing, Snakemake will identify another rule in the Snakefile to produce this input. this process goes on recursively until Snakemake find existing input file(s). This is how Snakemake determines which rules need to be run and in which order.
+
+
+Target rule
+==========================   
+
+Target rule is the rule that Snakemake focus on when executing a Snakefile. When a workflow is executed, Snakemake will focus on producing output/target(s) defined in the target rule by create a sequence of jobs that dependent on each other. 
+
+By default, if no target rule is specified, Snakemake will define the first rule of the sankefile as the target. Target rule defines a collection of final outputs expected from the workflow.
+
+
+ 
 The Input and Output arguments
 ==============================
+
 Snakemake rules can have as many ``input`` and ``output`` files as required by a rule.
 
 Multiple input or output files can be referred to either by index or by name.
@@ -62,7 +80,7 @@ Multiple input or output files can be referred to either by index or by name.
          'cat {input[0]} {input[1]} > {output}'
        
 
-Name input and output files:
+``input`` and ``output`` files can be referred via their names:
 
 .. code-block:: python
    :linenos:
@@ -81,18 +99,8 @@ Name input and output files:
    It is important to have quotations aoround each of ``input`` and ``output`` paths, and to separate each of the multiple inputs and outputs with a comma ``,``.
 
 
-Target rule
-==========================     
-
-
-By default snakemake executes the first rule in the snakefile. 
-
-if no target is given at the command line, Snakemake will define the first rule of the Snakefile as the target.  Hence, it is best practice to have a rule all at the top of the workflow which has all typically desired target files as input files.
-      
- 
- 
 Running a workflow
-==========================
+************************************
  
 .. code-block:: console
 
