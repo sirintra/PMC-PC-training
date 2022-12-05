@@ -1,19 +1,19 @@
 About this course
 ===================================
-This course is designed for beginners who want to understand how the PanCancer analysis workflow (`PanCancerWF <https://github.com/PMC-QUB-HTS/PanCancer_WF/>`_) work. It is designed to provide trainees with short and frequent hands-on sessions. 
+This course is designed for beginners who want to understand how the PanCancer analysis workflow (`PanCancerWF <https://github.com/PMC-QUB-HTS/PanCancer_WF/>`_) works. It is designed to provide trainees with short and straightforward hands-on sessions. 
 
-The aims of the course are:
+The aims of the course are to provide:
 
-* To provide basic understanding of the technologies (e.g. workflow, container, job scheduler) employed in the PanCancerWF and how these technologies have been put together in the PanCancerWF.
-* To provide basic understand how the PanCancerWF works on Kelvin2 HPC
-* To provide an overview of the data management and flow of input/output of the PanCancerWF on Kelvin2 HPC
+* a basic understanding of the technologies (e.g. workflow, container, job scheduler) employed in the PanCancerWF.
+* basic understand how the PanCancerWF works on Kelvin2 HPC
+* an overview of the data management and flow of input/output of the PanCancerWF on Kelvin2 HPC
 
 
 Learning objectives
 -------------------
 * Versioning control and code review ....Git and GitHub
 * Describe basic concepts of technoligies employed the the workflow (e.g. Snakemake, Singularity, SLURM)
-* Describe Singula
+* Describe Singularity
 
 
 Prerequisite / technical requirements
