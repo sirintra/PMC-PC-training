@@ -27,11 +27,17 @@ The PanCancer workflow package has the following folder structure:
 
 
 * ``runSnakemake.sh`` a bash script to launch the analysis workflow. This is a wrapper script that perform the foloowing steps:
+  
   1. initialises the system by automatically configuring the correct environment for the run (e.g. download relevant BCL folder, generate run-specific configuration files etc.)
+  
   2. Execute the Snakemake workflow, which creates a set of required compute jobs and submit jobs to a job scheduler
+
 * ``sys/`` a directory containing files necessary for the workflow to run successfully. The directory contains three sub-directories:
+  
   1. ``conf/`` contains: 1) pre-defined configuration files specific to the workflow; 2) run-specific configuration files (i.e., sample_sheet.yaml and misc.yaml files) generated when executing the runScript.sh script.
+  
   2. ``input/`` contains input files specific to the PanCancer project such as target bed file and transcript of interest list etc.
+  
   3. ``src/`` contains Snakemake and accessory scripts
 
 
