@@ -17,6 +17,7 @@ The PanCancer analysis (PanCancer_WF) package  contains a comprehensive automate
 The PanCancer_WF is composed of two main components: 
 
 * Source code - a set of inter-related scripts that automates the execution of the workflow, version controlled on `GitHub <https://github.com/PMC-QUB-HTS/PanCancer_WF>`_; 
+
 * Dependencies of the workflow - mainly composed of reference data files and Singularity image files. The dependencies are readily accessible on Kelvin2 HPC.
 
 
@@ -31,6 +32,7 @@ The PanCancer workflow package has the following folder structure:
   1. initialises the system by automatically configuring the correct environment for the run (e.g. download relevant BCL folder, generate run-specific configuration files etc.)
   
   2. Execute the Snakemake workflow, which creates a set of required compute jobs and submit jobs to a job scheduler
+
 
 * ``sys/`` a directory containing files necessary for the workflow to run successfully. The directory contains three sub-directories:
   
