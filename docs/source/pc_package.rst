@@ -46,7 +46,7 @@ The PanCancer workflow package has the following folder structure:
 .. image:: img_analysis_package.png
    :width: 500 
 
-
+* ``slurm/`` contain configuration of Kelvin2 profile. This enables Snakemake to submit jobs to the cluster
 
 
 
