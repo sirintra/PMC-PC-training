@@ -4,7 +4,11 @@ PanCancer analysis package
 Overview of PanCancer_WF package
 ********************************
 
-The PanCancer analysis (PanCancer_WF) package  contains a comprehensive automated workflow that performs various types of analyses commonly required for cancer genome analysis. The package is designed to identify 1) single nucleotide variants (SNV) and small insertions/deletions (INDEL) variants; 2) large structural variants (SV); 3) Copy number alterations; and 4) microsatellite instability from targeted sequencing data.
+The PanCancer analysis (PanCancer_WF) package  contains a comprehensive automated workflow that performs various types of analyses commonly required for cancer genome analysis. The package is designed to identify: 
+* single nucleotide variants (SNV) and small insertions/deletions (INDEL) variants; 
+* large structural variants (SV); 
+* Copy number alterations; and
+* microsatellite instability from targeted sequencing data.
 
 .. image:: img_pipeline_overview.png
    :width: 500
@@ -13,7 +17,7 @@ The PanCancer analysis (PanCancer_WF) package  contains a comprehensive automate
 The PanCancer_WF is composed of two main components: 
 
 * Source code - a set of inter-related scripts that automates the execution of the workflow, version controlled on `GitHub <https://github.com/PMC-QUB-HTS/PanCancer_WF>`_; 
-* Dependencies of the workflow, which are mainly composed of reference data files and Singularity image files. The dependencies are readily accessible on Kelvin2 HPC.
+* Dependencies of the workflow - mainly composed of reference data files and Singularity image files. The dependencies are readily accessible on Kelvin2 HPC.
 
 
 Structure of PanCancer_WF package
@@ -23,12 +27,12 @@ The PanCancer workflow package has the following folder structure:
 
 
 * ``runSnakemake.sh`` a bash script to launch the analysis workflow. This is a wrapper script that perform the foloowing steps:
-  #. initialises the system by automatically configuring the correct environment for the run (e.g. download relevant BCL folder, generate run-specific configuration files etc.)
-  #. Execute the Snakemake workflow, which creates a set of required compute jobs and submit jobs to a job scheduler
+  1. initialises the system by automatically configuring the correct environment for the run (e.g. download relevant BCL folder, generate run-specific configuration files etc.)
+  2. Execute the Snakemake workflow, which creates a set of required compute jobs and submit jobs to a job scheduler
 * ``sys/`` a directory containing files necessary for the workflow to run successfully. The directory contains three sub-directories:
-  #. ``conf/`` contains: 1) pre-defined configuration files specific to the workflow; 2) run-specific configuration files (i.e., sample_sheet.yaml and misc.yaml files) generated when executing the runScript.sh script.
-  #. ``input/`` contains input files specific to the PanCancer project such as target bed file and transcript of interest list etc.
-  #. ``src/`` contains Snakemake and accessory scripts
+  1. ``conf/`` contains: 1) pre-defined configuration files specific to the workflow; 2) run-specific configuration files (i.e., sample_sheet.yaml and misc.yaml files) generated when executing the runScript.sh script.
+  2. ``input/`` contains input files specific to the PanCancer project such as target bed file and transcript of interest list etc.
+  3. ``src/`` contains Snakemake and accessory scripts
 
 
 .. image:: img_analysis_package.png
