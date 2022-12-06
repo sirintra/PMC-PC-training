@@ -31,10 +31,10 @@ GitHub provides useful features like issues (thread discussions), code review, p
 Git basic terminology
 ---------------------
 ``commit`` 
-A commit consists of a single ot multiplr related patches. Commits are identified using ids. 
+A commit consists of a single or multiple related patches. Commits are identified using ids. 
 
 ``clone``
-Clone is Creates a local copy of a project that already exists remotely. The clone includes all the project's files, history, and branches.
+Clone creates a local copy of a project that already exists remotely. The clone includes all the project's files, history, and branches.
 
 ``pull``
 Running ``git pull`` will cause git to update the files on your local computer with changes made by others.
