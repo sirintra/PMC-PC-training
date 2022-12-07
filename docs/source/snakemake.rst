@@ -42,7 +42,7 @@ Example Snakemake pipeline:
 
 
 Dependencies between rules
-==========================
+============================
 
 Dependencies between rules are determined by matching input/output file names. The order of rules matters here as Snakemake as dependencies are determined top-down. 
 
@@ -52,7 +52,7 @@ Given a set of targets (outputs), Snakemake will find a composition of rules to 
 
 
 Target rule
-==========================   
+************************************  
 
 Target rule is the rule that Snakemake focus on when executing a Snakefile. When a workflow is executed, Snakemake will focus on producing output/target(s) defined in the target rule by create a sequence of jobs that dependent on each other. 
 
@@ -82,7 +82,7 @@ Defing a target rule
 
  
 The Input and Output arguments
-==============================
+************************************
 
 Snakemake rules can have as many ``input`` and ``output`` files as required by a rule.
 
@@ -128,7 +128,12 @@ Running a workflow
    snakemake --snakefile [path_to_SnakeFile] --cores [number_of_cores_required]
     
     
- 
-    
-  
-`Snakemake tutorial <https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html>`_
+
+Wildcards
+************************************
+Wildcards can be used to
+
+
+
+
+`More Snakemake tutorial <https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html>`_
