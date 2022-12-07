@@ -37,8 +37,8 @@ Example Snakemake pipeline:
 
 .. warning::
 
-   Correct indentation is important. Just like Python, indentition matter in Snakemake.
-   Snakemake uses the indentiation to work out different components of each rule.
+   Just like Python, correct indentation is important in Snakemake.
+   Snakemake uses the indentation to work out different components of each rule.
 
 
 Dependencies between rules
@@ -72,7 +72,7 @@ Defining a target rule:
 
 .. Note::
 
-   Snakemake will execute any rule which produces an output which a target rule requires as its input
+   Snakemake will execute any rule that produces an output required by a target rule (defined as inputs in the target rule) 
 
 
 .. Tip::
@@ -81,7 +81,7 @@ Defining a target rule:
 
 
  
-The Input and Output arguments
+Input and Output arguments
 ************************************
 
 Snakemake rules can have as many ``input`` and ``output`` files as required by a rule.
@@ -142,9 +142,9 @@ For example, to submit jobs to slurm:
 .. code-block:: console
 
    snakemake -s [path_to_SnakeFile] --cluster "sbatch"
+      
    
-
- Or to immediately submit all jobs to the cluster instead of waiting for present input files:
+Or to immediately submit all jobs to the cluster instead of waiting for present input files:
 
 .. code-block:: console
 
@@ -209,10 +209,6 @@ The above code is eqivalent to:
      input: 
          's1.txt',
          's2.txt'
-
-
-
-
 
 
 
