@@ -160,6 +160,17 @@ The ``expand()`` function allow easy aggregation of items given a variable name 
 
 The two following examples 
 
+.. code-block:: python
+   :linenos:
+   
+   samples=['s1','s2']
+   rule step1:
+     input: 
+         's1.txt',
+         's2.txt'
+
+
+
 
 
 
