@@ -156,6 +156,13 @@ The rule above has one defined wildcard ``{samples}``. This rule will run 2 jobs
 ``expand()`` function
 ************************************
 
+The ``expand()`` function allow easy aggregation of items given a variable name defining a list of items.
+
+The two following examples 
+
+
+
+
 
 
 `More Snakemake tutorial <https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html>`_
