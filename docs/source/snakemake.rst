@@ -120,15 +120,46 @@ Multiple input or output files can be referred to either by index or by name.
    It is important to have quotations aoround each of ``input`` and ``output`` paths, and to separate each of the multiple inputs and outputs with a comma ``,``.
 
 
-Running a workflow
+Run Snakemake workflow
 ************************************
 
+To run a Snakemake workflow, type:
  
 .. code-block:: console
 
    snakemake --snakefile [path_to_SnakeFile] --cores [number_of_cores_required]
+
+
+Upon execution of the ``snakemake`` command, some information about the execution of the workflow will be printed out on the console
     
-    
+
+By default, Snakemake will execute jobs locally on the host machine where the ``snakemake`` command is executed. 
+To submit jobs the cluster, use the ``--cluster [submit_command]`` option. This allow snakemake rules to run with the given submit command.
+
+
+For example, to submit jobs to slurm:
+
+.. code-block:: console
+
+   snakemake -s [path_to_SnakeFile] --cluster "sbatch"
+   
+
+ Or to immediately submit all jobs to the cluster instead of waiting for present input files:
+
+.. code-block:: console
+
+   snakemake -s [path_to_SnakeFile] --jobs [max_number_of_jobs] --immediate-submit --notemp --cluster "sbatch --dependency {dependencies}"
+
+
+
+`More on Cluster Execution <https://snakemake.readthedocs.io/en/stable/executing/cluster.html>`_
+
+
+.. Tip::
+
+   As mentioned before, by default Snakemake will execute the first rule of the snakefile and use it as the target. To specify a particular rule as a target, add the name of that rule at the end of the ``snakemake`` commnad:
+
+
 
 Wildcards
 ************************************
@@ -156,15 +187,25 @@ The rule above has one defined wildcard ``{samples}``. This rule will run 2 jobs
 ``expand()`` function
 ************************************
 
-The ``expand()`` function allow easy aggregation of items given a variable name defining a list of items.
+The ``expand()`` function allows easy aggregation of items from a given a variable name defining a list of items.
 
-The two following examples 
+Example of using the ``expand`` function:
 
 .. code-block:: python
    :linenos:
    
    samples=['s1','s2']
-   rule step1:
+   rule xxx:
+     input:
+       expand("{sample}.txt", sample=samples)
+
+     
+The above code is eqivalent to:     
+
+.. code-block:: python
+   :linenos:
+   
+   rule xxx:
      input: 
          's1.txt',
          's2.txt'
