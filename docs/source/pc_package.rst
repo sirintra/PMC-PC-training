@@ -5,10 +5,15 @@ Overview of PanCancer_WF package
 ********************************
 
 The PanCancer analysis (PanCancer_WF) package  contains a comprehensive automated workflow that performs various types of analyses commonly required for cancer genome analysis. The package is designed to identify: 
+
 * single nucleotide variants (SNV) and small insertions/deletions (INDEL) variants; 
+
 * large structural variants (SV); 
-* Copy number alterations; and
+
+* copy number alterations; and
+
 * microsatellite instability from targeted sequencing data.
+
 
 .. image:: img_pipeline_overview.png
    :width: 500
@@ -18,7 +23,10 @@ The PanCancer_WF is composed of two main components:
 
 * Source code - a set of inter-related scripts that automates the execution of the workflow, version controlled on `GitHub <https://github.com/PMC-QUB-HTS/PanCancer_WF>`_; 
 
-* Dependencies of the workflow - mainly composed of reference data files and Singularity image files. The dependencies are readily accessible on Kelvin2 HPC.
+* Dependencies of the workflow - mainly composed of reference data files and Singularity image files. The dependencies are accessible on Kelvin2 HPC.
+
+
+The analysis workflow is implemented using Snakemake. Each step executes a Singularity container that encapsulates the analysis-ready state of a tool along with its required dependencies. With the use of Snakemake and Singularity, the workflow package can easily be deployed in any computational environment for execution with high scalability. 
 
 
 Structure of PanCancer_WF package
@@ -43,11 +51,16 @@ The PanCancer workflow package has the following folder structure:
   3. ``src/`` contains Snakemake and accessory scripts
 
 
+* ``slurm/`` contain configuration of Kelvin2 profile. This enables Snakemake to submit jobs to the cluster via slurm job scheduler
+
+
 .. image:: img_analysis_package.png
    :width: 500 
 
-* ``slurm/`` contain configuration of Kelvin2 profile. This enables Snakemake to submit jobs to the cluster
 
+.. Note::
+
+   Several programming languagues have been used to write different components of the PanCancer_WF. These include Python, Perl, Bash, and R.
 
 
 
