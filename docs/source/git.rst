@@ -45,7 +45,7 @@ Pushes your committed changes to the remote GitHub server. This makes your commi
 EXERCISE 1
 ############
 
-Clone the ‘PMC-PC-training-example’ project from the PMC GitHub account
+Clone the ``PMC-PC-training-example`` project from the PMC GitHub account.
 
 .. code-block:: console
    
