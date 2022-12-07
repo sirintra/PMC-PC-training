@@ -54,11 +54,11 @@ Given a set of targets (outputs), Snakemake will find a composition of rules to 
 Target rule
 ************************************  
 
-Target rule is the rule that Snakemake focus on when executing a Snakefile. When a workflow is executed, Snakemake will focus on producing output/target(s) defined in the target rule by create a sequence of jobs that dependent on each other. 
+Target rule is the rule that Snakemake focuses on when executing a Snakefile. When a workflow is executed, Snakemake will focus on producing output/target(s) defined in the target rule by create a sequence of jobs that dependent on each other. 
 
-By default, if no target rule is specified, Snakemake will use the first rule of the snakefile as the target. In the nutshell, target rule should define a collection of final outputs expected from the workflow.
+By default, if no target rule is specified, Snakemake will use the first rule of the snakefile as the target. In the nutshell, a target rule should define a collection of final outputs expected from the workflow.
 
-Defing a target rule
+Defining a target rule:
 
 .. code-block:: python
 
@@ -72,7 +72,7 @@ Defing a target rule
 
 .. Note::
 
-   Snakemake will execute any rule which can produce an output which a target rule requires as its input
+   Snakemake will execute any rule which produces an output which a target rule requires as its input
 
 
 .. Tip::
@@ -122,6 +122,7 @@ Multiple input or output files can be referred to either by index or by name.
 
 Running a workflow
 ************************************
+
  
 .. code-block:: console
 
@@ -131,8 +132,29 @@ Running a workflow
 
 Wildcards
 ************************************
-Wildcards can be used to
 
+`Wildcards <https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html#wildcards>`_ can be considered as a placeholder variables. This variable is usually defined as a list of items and can be reaplaced bu regular expression. A wildcard variable is useful for generalize a rule to apply to a number of datasets.
+
+
+Example of defining a rule that will process through list of files: 
+
+.. code-block:: python
+   :linenos:
+   
+   samples=['s1','s2']
+   rule step1:
+     input: 
+         '{samples}.txt'
+     output: 
+         '{samples}.out'
+     shell:
+         'cat {input} > {output}'
+       
+The rule above has one defined wildcard ``{samples}``. This rule will run 2 jobs (in parallel if possible) that produce s1.out and s2.out
+
+
+``expand()`` function
+************************************
 
 
 
