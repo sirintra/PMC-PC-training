@@ -1,17 +1,18 @@
 PMC Bioinformatics training course 
-===================================
+###################################
 
-Analysis worflow for the PanCancer panel sequencing data
-==============================================================================
+PanCancer_WF: Analysis workflow for the PanCancer panel sequencing data
+***********************************************************************
+
 
 Main instructor: 
-----------------
+=================
 
 Sirintra Nakjang
 
 
 Contents
---------
+=================
 .. toctree::
 
    about
