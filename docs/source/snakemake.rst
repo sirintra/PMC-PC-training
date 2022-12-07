@@ -35,7 +35,7 @@ Example Snakemake pipeline:
          'head -n1 {input} > {output}'
  
 
-.. warning::
+.. important::
 
    Just like Python, correct indentation is important in Snakemake.
    Snakemake uses the indentation to work out different components of each rule.
@@ -115,7 +115,8 @@ Multiple input or output files can be referred to either by index or by name.
      shell:
          'cat {input.a} {input.b} > {output.o}'
 
-.. warning::
+
+.. important::
 
    It is important to have quotations aoround each of ``input`` and ``output`` paths, and to separate each of the multiple inputs and outputs with a comma ``,``.
 
@@ -157,7 +158,7 @@ Or to immediately submit all jobs to the cluster instead of waiting for present 
 
 .. Tip::
 
-   As mentioned before, by default Snakemake will execute the first rule of the snakefile and use it as the target. To specify a particular rule as a target, add the name of that rule at the end of the ``snakemake`` commnad:
+   As mentioned before, by default Snakemake will execute the first rule of the snakefile and use it as the target. To specify a particular rule as a target, add the name of that rule at the end of the ``snakemake`` commnad.
 
 
 
