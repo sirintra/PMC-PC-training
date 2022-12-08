@@ -13,10 +13,10 @@ Basic workflow definition
 ==========================
 A Snakemake workflow defines a data analysis in terms of `rules <https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html>`_. ``Snakefile`` refers to a file that is executed by Snakemake. This file usually contains a collection of Snakemake rules. 
 
-``rule`` is basically an instruction of how to make something (outputs) from some inputs. Most commonly, rules consist of a name, input file(s), output file(s), and a set of shell commands to generate the output from the input. 
+``rule`` is basically an instruction of how to make something (outputs) from some inputs. A basic Snakemake rule consists of a name, input file(s), output file(s), and a set of shell commands to generate the output from the input. 
 
 
-Example Snakemake pipeline:
+Example syntax of a ``Snakefile``:
 
 .. code-block:: python
    :linenos:
@@ -144,7 +144,8 @@ To run a Snakemake workflow, type:
    snakemake --snakefile [path_to_SnakeFile] --cores [number_of_cores_required]
 
 
-Upon execution of the ``snakemake`` command, some information about the execution of the workflow will be printed out on the console
+.. note::
+   By default, upon execution of the ``snakemake`` command, information about the execution of the workflow will be printed out on the console.
     
 
 By default, Snakemake will execute jobs locally on the host machine where the ``snakemake`` command is executed. 
