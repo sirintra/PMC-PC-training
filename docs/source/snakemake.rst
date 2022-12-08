@@ -11,9 +11,13 @@ A Snakemake workflow is defined by specifying rules in a Snakefile. Rules decomp
 
 Basic workflow definition
 ==========================
-A Snakemake workflow defines a data analysis in terms of `rules <https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html>`_. ``Snakefile`` refers to a file that is executed by Snakemake. This file usually contains a collection of Snakemake rules. 
+A Snakemake workflow defines a data analysis in terms of `rules <https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html>`_. 
 
 ``rule`` is basically an instruction of how to make something (outputs) from some inputs. A basic Snakemake rule consists of a name, input file(s), output file(s), and a set of shell commands to generate the output from the input. 
+
+``Snakefile`` refers to a file that is executed by Snakemake. This file usually contains a collection of Snakemake rules. 
+
+Snakemake follows Python syntax
 
 
 Example syntax of a ``Snakefile``:
