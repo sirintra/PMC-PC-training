@@ -1,23 +1,23 @@
 Introduction to Singularity
 ############################
 
-`Singularity <https://docs.sylabs.io/guides/latest/user-guide/>`_ is a container platform. It allows you to create and run containers that package up pieces of software in a way that is portable and reproducible. 
+`Singularity <https://docs.sylabs.io/guides/latest/user-guide/>`_ is a containerisation platform. It allows you to create image files that package up pieces of software in a way that is portable and reproducible. One or more containers can then be created, based on those images.
 
-Singularity is an open-source project designed to run on HPC clusters as it can be run as a simple user, unlink `Docker <https://www.docker.com/>`_ which requires a root privilege to run.
+Singularity is an open-source project designed to run on HPC clusters. It can be run within an ordinary user account, unlike `Docker <https://www.docker.com/>`_, which requires root privileges to run.
 
-What are containers
+What are containers?
 *********************
 
-Containers provide a minimal virtualized environment: an isolated file system accessible from a host computer. Containerization allows controlling of sofeware installation and dependencies. 
+Containers provide a minimal virtualized environment: an isolated file system accessible from a host computer. Containerization allows a controlled set of software and dependencies to be installed. The versions of applications and libraries held within an image / container can be totally independent of any software installed on the host machine (i.e. the HPC environment). This is a powerful feature that enables specific versions of software to be packaged in a convenient and portable image file. 
 
 Two important concepts
 ***********************
 
 Image
 =====
-Image is a set of layers, read-only templates.
+An image is analgous to a template. It is a read-only filesystem, from which many containers can be producted. When a container is created from an image, its content starts off identical to the image. Several containers created from the same image will initially have the same content, but may then diverge as the follow their own lifecycle.
 
-Singularity image is a read-only file (typically with .sif or .img extension). A Singularity image can be created with the ``singularity build`` command, either from a a `container recipe <https://docs.sylabs.io/guides/2.6/user-guide/container_recipes.html>`_ or from a container repository (e.g. `Docker Hub <https://hub.docker.com/>`_ , `BioContainers <https://biocontainers.pro/>`_).
+Singularity images consist of a read-only file (typically with .sif or .img extension). A Singularity image can be created with the ``singularity build`` command, either from a a `container recipe <https://docs.sylabs.io/guides/2.6/user-guide/container_recipes.html>`_ or from a container repository (e.g. `Docker Hub <https://hub.docker.com/>`_ , `BioContainers <https://biocontainers.pro/>`_).
 
 
 Example of recipe
@@ -49,7 +49,7 @@ An example of a Singularity recipe file is shown below:
 
 
 .. note::
-   root account (or sudo) is required when creating a Singularity image with the ``singularity build`` command
+   A root account (or sudo) is required when creating a Singularity image with the ``singularity build`` command
    
    
 .. tip::
@@ -76,7 +76,7 @@ EXCERCISE 1
 
 Container
 =========
-Container is an instance of an image. You can have multiple running containers of the same image.
+A container is an instance of an image. You can have multiple running containers of the same image.
 
 
 Running a Singularity container
