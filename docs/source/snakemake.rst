@@ -39,6 +39,12 @@ Example Snakemake pipeline:
 
    Just like Python, correct indentation is important in Snakemake.
    Snakemake uses the indentation to work out different components of each rule.
+   
+   
+.. note::
+   
+   {input} and {output} are Snakemake wildcards which are equivalent to the value we specified for the current rule input and output, respectively.
+   When Snakemake runs it will replace this wildcard variables with the actual values
 
 
 Dependencies between rules
