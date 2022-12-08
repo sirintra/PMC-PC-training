@@ -4,7 +4,7 @@ PanCancer analysis package
 Overview of PanCancer_WF package
 ********************************
 
-The PanCancer analysis (PanCancer_WF) package  contains a comprehensive automated workflow that performs various types of analyses commonly required for cancer genome analysis. The package is designed to identify: 
+The PanCancer analysis (PanCancer_WF) package contains a comprehensive automated workflow that executes various prograams commonly required for cancer genome analysis. The package is designed to identify: 
 
 * single nucleotide variants (SNV) and small insertions/deletions (INDEL) variants; 
 
@@ -19,14 +19,14 @@ The PanCancer analysis (PanCancer_WF) package  contains a comprehensive automate
    :width: 500
 
 
-The PanCancer_WF is composed of two main components: 
+The PanCancer_WF is composed of two main parts: 
 
-* Source code - a set of inter-related scripts that automates the execution of the workflow, version controlled on `GitHub <https://github.com/PMC-QUB-HTS/PanCancer_WF>`_; 
+* Source code - a set of inter-related scripts that automate the execution of the workflow. These are version controlled on `GitHub <https://github.com/PMC-QUB-HTS/PanCancer_WF>`_; 
 
 * Dependencies of the workflow - mainly composed of reference data files and Singularity image files. The dependencies are accessible on Kelvin2 HPC.
 
 
-The analysis workflow is implemented using Snakemake. Each step executes a Singularity container that encapsulates the analysis-ready state of a tool along with its required dependencies. With the use of Snakemake and Singularity, the workflow package can easily be deployed in any computational environment for execution with high scalability. 
+The analysis workflow is implemented using Snakemake. Each step executes a Singularity container that encapsulates the analysis-ready state of a tool, along with its required dependencies. With the use of Snakemake and Singularity, the workflow package can easily be deployed in any computational environment for execution with high scalability. 
 
 
 Structure of PanCancer_WF package
@@ -35,11 +35,11 @@ Structure of PanCancer_WF package
 The PanCancer workflow package has the following folder structure:
 
 
-* ``runSnakemake.sh`` a bash script to launch the analysis workflow. This is a wrapper script that perform the foloowing steps:
+* ``runSnakemake.sh`` a bash script to launch the analysis workflow. This is a wrapper script that perform the following steps:
   
-  1. initialises the system by automatically configuring the correct environment for the run (e.g. download relevant BCL folder, generate run-specific configuration files etc.)
+  1. Initialises the system by automatically configuring the correct environment for the run (e.g. downloads the relevant BCL folder, generates run-specific configuration files etc.)
   
-  2. Execute the Snakemake workflow, which creates a set of required compute jobs and submit jobs to a job scheduler
+  2. Executes the Snakemake workflow, which creates a set of required compute jobs and submit jobs to a job scheduler
 
 
 * ``sys/`` a directory containing files necessary for the workflow to run successfully. The directory contains three sub-directories:
@@ -51,7 +51,7 @@ The PanCancer workflow package has the following folder structure:
   3. ``src/`` contains Snakemake and accessory scripts
 
 
-* ``slurm/`` contain configuration of Kelvin2 profile. This enables Snakemake to submit jobs to the cluster via slurm job scheduler
+* ``slurm/`` contains a configuration profile for the Kelvin2 environment. This enables Snakemake to submit jobs to the cluster via the slurm job scheduler.
 
 
 .. image:: img_analysis_package.png
