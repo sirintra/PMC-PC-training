@@ -13,7 +13,7 @@ Basic workflow definition
 ==========================
 A Snakemake workflow defines a data analysis in terms of `rules <https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html>`_. 
 
-``rule`` is basically an instruction of how to make something (outputs) from some inputs. A basic Snakemake rule consists of a name, input file(s), output file(s), and a set of shell commands to generate the output from the input. 
+``rule`` is basically an instruction of how to make something (outputs) from some inputs. A basic Snakemake rule may consist of a name, input file(s), output file(s), and a set of shell commands to generate the output from the input. 
 
 ``Snakefile`` refers to a file that is executed by Snakemake. This file usually contains a collection of Snakemake rules. 
 
