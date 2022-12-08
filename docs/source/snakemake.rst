@@ -181,7 +181,7 @@ Or to immediately submit all jobs to the cluster instead of waiting for present 
 
 .. Tip::
 
-   As mentioned before, by default Snakemake will execute the first rule of the snakefile and use it as the target. To specify a particular rule as a target, add the name of that rule at the end of the ``snakemake`` commnad.
+   As mentioned before, by default Snakemake will execute the first rule of the snakefile and use it as the target. To specify a particular rule as a target, add the name of that rule at the end of the ``snakemake`` command.
 
 
 
