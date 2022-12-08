@@ -11,7 +11,9 @@ A Snakemake workflow is defined by specifying rules in a Snakefile. Rules decomp
 
 Basic workflow definition
 ==========================
-A Snakemake workflow defines a data analysis in terms of `rules <https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html>`_. ``Snakefile`` typically refers to a file containing a collection of Snakemake rules. Most commonly, rules consist of a name, input files, output files, and a shell command to generate the output from the input. 
+A Snakemake workflow defines a data analysis in terms of `rules <https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html>`_. ``Snakefile`` refers to a file that is executed by Snakemake. This file usually contains a collection of Snakemake rules. 
+
+Most commonly, rules consist of a name, input files, output files, and a shell command to generate the output from the input. 
 
 
 Example Snakemake pipeline:
@@ -39,6 +41,11 @@ Example Snakemake pipeline:
 
    Just like Python, correct indentation is important in Snakemake.
    Snakemake uses the indentation to work out different components of each rule.
+   
+   
+.. warning::
+   
+   Just like python, you can use either tabs or spaces for indentation (don’t use both!).
    
    
 .. note::
