@@ -153,7 +153,8 @@ To run a Snakemake workflow, type:
 
 
 .. note::
-   By default, upon execution of the ``snakemake`` command, information about the execution of the workflow will be printed out on the console.
+
+   By default, upon execution of the ``snakemake`` command, Snakemake will inform us about the execution of the workflow on the console and any errors will be reported.
     
 
 By default, Snakemake will execute jobs locally on the host machine where the ``snakemake`` command is executed. 
