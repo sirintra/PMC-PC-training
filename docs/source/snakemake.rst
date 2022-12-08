@@ -67,6 +67,11 @@ From the example code above, the two rules have a dependent relationship where `
 Given a set of targets (outputs), Snakemake will find a composition of rules to create them. For a given target, Snakemake identifies the rule that produces the target output, if the input files of that rule is missing, Snakemake will identify another rule in the Snakefile to produce this input. this process goes on recursively until Snakemake find existing input file(s). This is how Snakemake determines which rules need to be run and in which order.
 
 
+.. Important::
+
+   Rules in the same ``Snakefile`` cannot have the same name
+
+
 Target rule
 ************************************  
 
