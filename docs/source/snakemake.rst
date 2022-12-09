@@ -156,7 +156,7 @@ To run a Snakemake workflow, type:
     
 
 By default, Snakemake will execute jobs locally on the host machine where the ``snakemake`` command is executed. 
-To submit jobs the cluster, use the ``--cluster [submit_command]`` option. This allow snakemake rules to run with the given submit command.
+To submit jobs to cluster, use the ``--cluster [submit_command]`` option. This allows Snakemake rules to run with a given submit command.
 
 
 For example, to submit jobs to slurm:
