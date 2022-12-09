@@ -6,7 +6,7 @@ Introduction to Snakemake
 Basic concept of Snakemake workflow 
 ************************************
 
-A Snakemake workflow is defined by specifying rules in a Snakefile. Rules decompose the workflow into small steps (for example, the application of a single tool) by specifying how to create sets of output files from sets of input files. Snakemake automatically determines the dependencies between the rules by matching file names.
+A Snakemake workflow is defined by specifying rules in a `Snakefile <https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html>`_. Rules decompose the workflow into small steps (for example, the application of a single tool) by specifying how to create sets of output files from sets of input files. Snakemake automatically determines the dependencies between the rules by matching file names.
 
 
 Basic workflow definition
