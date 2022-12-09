@@ -58,7 +58,7 @@ Example syntax of a ``Snakefile``:
 Dependencies between rules
 ============================
 
-Dependencies between rules are determined by matching input/output file names. The order of rules matters here as Snakemake as dependencies are determined top-down. 
+Dependencies between rules are determined by matching input/output file names. The order of rules matters here as Snakemake dependencies are determined top-down. 
 
 From the example code above, the two rules have a dependent relationship where ``step2`` is dependent on ``step1``. This is because the output of ``step1`` is an input to ``step2`` rule. 
 
