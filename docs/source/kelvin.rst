@@ -130,7 +130,7 @@ scontrol
 
 ``scontrol`` view or modify configuration (e.g. partition, node) and state of submitted jobs.
 
-Example: To change a requested partion of a submitted job to ``k2-hipri`` (e.g. from ``k2-medpri``):
+Example: To change a requested partition of a submitted job to ``k2-hipri`` (e.g. from ``k2-medpri``):
 
 
 .. code-block:: console
