@@ -109,7 +109,7 @@ Singularity allows you to map directories on your host system to directories wit
 
 By default, Singularity binds your home directory and a number of paths in the root directory to the container.  Here is a full list of paths included automatically inside each container: ``$PWD``, ``$HOME``, ``/tmp``, ``/proc``, ``/sys``, ``/dev`` 
 
-To request additional bind paths with the container, use ``--bind`` option. The Singularity action commands (``run``, ``exec``, ``shell` and ``instance start`` will accept the ``--bind`` command-line option to specify bind paths.
+To request additional bind paths with the container, use ``--bind`` option. The Singularity action commands (``run``, ``exec``, ``shell`` and ``instance start`` will accept the ``--bind`` command-line option to specify bind paths.
 
 Example binding ``/data`` on the host to ``/mnt`` in the container
 
