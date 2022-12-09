@@ -20,6 +20,11 @@ An image is analgous to a template. It is a read-only filesystem, from which man
 Singularity images are essentailly text-based files (typically with .sif or .img extension). A Singularity image can be created with the ``singularity build`` command, either from a a `container recipe <https://docs.sylabs.io/guides/2.6/user-guide/container_recipes.html>`_ or from a container repository (e.g. `Docker Hub <https://hub.docker.com/>`_ , `BioContainers <https://biocontainers.pro/>`_).
 
 
+.. attention::
+   A root account (or sudo) is required when creating a Singularity image with the ``singularity build`` command
+   
+
+
 Example of recipe
 ------------------
 
@@ -47,10 +52,6 @@ An example of a Singularity recipe file is shown below:
   %runscript
      $@
 
-
-.. note::
-   A root account (or sudo) is required when creating a Singularity image with the ``singularity build`` command
-   
    
 .. tip::
    Alternatively, a Singularity image can be pulled from a URI using the ``singularity pull`` command.
