@@ -75,7 +75,7 @@ Given a set of targets (outputs), Snakemake will find a composition of rules to 
 Target rule
 ************************************  
 
-Target rule is the rule that Snakemake focuses on when executing a Snakefile. When a workflow is executed, Snakemake will focus on producing output/target(s) defined in the target rule by creating a sequence of jobs that are dependent on each other. 
+A target rule is the rule that Snakemake focuses on when executing a Snakefile. When a workflow is executed, Snakemake will focus on producing output/target(s) defined in the target rule by creating a sequence of jobs that are dependent on each other. 
 
 By default, if no target rule is specified, Snakemake will use the first rule of the Snakefile as the target. In a nutshell, a target rule should define a collection of final outputs expected from the workflow.
 
@@ -98,16 +98,16 @@ Defining a target rule:
 
 .. Tip::
 
-   To run multiple anlaysis tasks (QC, SNV calling, CNV identification etc.) in parallel, we just need to include final output files from each task as targets in a target rule.
+   To run multiple anlaysis tasks (QC, SNV calling, CNV identification etc) in parallel, we just need to include the final output files from each task as targets in a target rule.
 
 
  
 Input and Output arguments
 ************************************
 
-Snakemake rules can have as many ``input`` and ``output`` files as required by a rule.
+Snakemake rules can have as many ``input`` and ``output`` files as required by the analysis tool wrapped by the rule.
 
-Multiple input or output files can be referred to either by index or by name.
+Multiple input or output files can be referred to either by index or by label. Here, files are referred to by index:
 
 .. code-block:: python
    :linenos:
@@ -122,15 +122,15 @@ Multiple input or output files can be referred to either by index or by name.
          'cat {input[0]} {input[1]} > {output}'
        
 
-``input`` and ``output`` files can be referred via their names:
+Alternatively, ``input`` and ``output`` files can be assigned and referred to by labels:
 
 .. code-block:: python
    :linenos:
    
    rule step1:
      input: 
-         a='input1.txt',
-         b='input2.txt'
+         a='input-file1.txt',
+         b='input-file2.txt'
      output: 
          o='output1.txt'
      shell:
@@ -139,7 +139,7 @@ Multiple input or output files can be referred to either by index or by name.
 
 .. important::
 
-   It is important to have quotations aoround each of ``input`` and ``output`` paths, and to separate each of the multiple inputs and outputs with a comma ``,``.
+   It is important to have (single) quotation marks around each of the ``input`` and ``output`` paths. When there are multiple input files or multiple output files, it is also necessary to separate each of the file definitions with a comma ``,``.
 
 
 Run Snakemake workflow
@@ -154,7 +154,7 @@ To run a Snakemake workflow, type:
 
 .. note::
 
-   By default, upon execution of the ``snakemake`` command, Snakemake will inform us about the execution of the workflow on the console and any errors will be reported.
+   By default, upon execution of the ``snakemake`` command, Snakemake will inform us about the execution of the workflow on the console, and any errors will be reported.
     
 
 By default, Snakemake will execute jobs locally on the host machine where the ``snakemake`` command is executed. 
@@ -188,7 +188,7 @@ Or to immediately submit all jobs to the cluster instead of waiting for present 
 Wildcards
 ************************************
 
-`Wildcards <https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html#wildcards>`_ can be considered as a placeholder variables. This variable is usually defined as a list of items and can be reaplaced bu regular expression. A wildcard variable is useful for generalize a rule to apply to a number of datasets.
+`Wildcards <https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html#wildcards>`_ can be considered as a placeholder variables. This variable is usually defined as a list of items and can be replaced by a regular expression. A wildcard variable is useful to generalize a rule so that it can apply to a number of datasets.
 
 
 Example of defining a rule that will process through list of files: 
