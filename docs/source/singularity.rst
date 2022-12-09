@@ -111,14 +111,14 @@ By default, Singularity binds your home directory and a number of paths in the r
 
 To request additional bind paths with the container, use ``--bind`` option. The Singularity action commands (``run``, ``exec``, ``shell`` and ``instance start`` will accept the ``--bind`` command-line option to specify bind paths.
 
-Example binding ``/data`` on the host to ``/mnt`` in the container
+Example of binding ``/data`` on the host to ``/mnt`` in the container
 
 .. code-block:: bash
 
    singularity exec --bind /data:/mnt my_container.sif
    
 
-To bind multiple directpries in a single command:
+To bind multiple directories in a single command:
  
 .. code-block:: bash
 
