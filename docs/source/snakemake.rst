@@ -15,9 +15,9 @@ Basic workflow definition
 ==========================
 A Snakemake workflow defines a data analysis in terms of `rules <https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html>`_. 
 
-``rule`` is basically an instruction of how to make something (outputs) from some inputs. A basic Snakemake rule may consist of a name, input file(s), output file(s), and a set of shell commands to generate the output from the input. 
+A ``rule`` is simply an instruction of how to create something (outputs) from some inputs. A basic Snakemake rule may consist of a name, input file(s), output file(s), and a set of shell commands used to generate the output from the input. 
 
-``Snakefile`` refers to a file that is executed by Snakemake. This file usually contains a collection of Snakemake rules. 
+A ``Snakefile`` refers to a file that is executed by Snakemake. This file usually contains a collection of Snakemake rules. 
 
 
 Example syntax of a ``Snakefile``:
@@ -43,33 +43,33 @@ Example syntax of a ``Snakefile``:
 
 .. important::
 
-   As Snakemake follows Python syntax, correct indentation is important.
-   Snakemake uses the indentation to work out different components of each rule.   
+   As Snakemake follows Python syntax, the correct indentation is important.
+   Snakemake uses the indentation to determine the different parts of each rule.   
    
 .. warning::
    
-   Just like python, you can use either tabs or spaces for indentation (don’t use both!).
+   Just like Python, you can use either tabs or spaces for indentation - but don’t use both!
    
    
 .. note::
    
-   ``{input}`` and ``{output}`` are Snakemake wildcards which are equivalent to the value we specified for the current rule input and output, respectively.
-   When Snakemake runs it will replace this wildcard variables with the actual values
+   ``{input}`` and ``{output}`` are Snakemake wildcards which are equivalent to the value that needs to be specified for the current rule input and output, respectively.
+   When Snakemake runs, it will replace these wildcard variables with the actual values
 
 
 Dependencies between rules
 ============================
 
-Dependencies between rules are determined by matching input/output file names. The order of rules matters here as Snakemake dependencies are determined top-down. 
+Dependencies between rules are determined by matching input/output file names. The order of rules matters here, as Snakemake dependencies are determined top-down. 
 
-From the example code above, the two rules have a dependent relationship where ``step2`` is dependent on ``step1``. This is because the output of ``step1`` is an input to ``step2`` rule. 
+From the example code above, the two rules have a dependent relationship where ``step2`` is dependent on ``step1``. This is because the output of ``step1`` is an input to the ``step2`` rule. 
 
-Given a set of targets (outputs), Snakemake will find a composition of rules to create them. For a given target, Snakemake identifies the rule that produces the target output, if the input files of that rule do not exist, Snakemake will identify another rule in the Snakefile to produce that input. This process goes on recursively until Snakemake find existing input file(s). This is how Snakemake determines which rules need to be run and in which order.
+Given a set of targets (outputs), Snakemake will find a composition of rules to create them. For a given target, Snakemake identifies the rule that produces the target output. If the input files of that rule do not exist, Snakemake will identify another rule in the Snakefile to produce that input. This process goes on recursively until Snakemake is able to find a rule that can execute directly on the existing input file(s). This is how Snakemake determines which rules need to be run, and in which order.
 
 
 .. Caution::
 
-   Rules in the same ``Snakefile`` cannot have the same name
+   The rules defined in the same ``Snakefile`` must have unique names
 
 
 Target rule
@@ -77,7 +77,7 @@ Target rule
 
 Target rule is the rule that Snakemake focuses on when executing a Snakefile. When a workflow is executed, Snakemake will focus on producing output/target(s) defined in the target rule by creating a sequence of jobs that are dependent on each other. 
 
-By default, if no target rule is specified, Snakemake will use the first rule of the Snakefile as the target. In the nutshell, a target rule should define a collection of final outputs expected from the workflow.
+By default, if no target rule is specified, Snakemake will use the first rule of the Snakefile as the target. In a nutshell, a target rule should define a collection of final outputs expected from the workflow.
 
 Defining a target rule:
 
