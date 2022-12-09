@@ -51,7 +51,7 @@ Example syntax of a ``Snakefile``:
    
 .. note::
    
-   {input} and {output} are Snakemake wildcards which are equivalent to the value we specified for the current rule input and output, respectively.
+   ``{input}`` and ``{output}`` are Snakemake wildcards which are equivalent to the value we specified for the current rule input and output, respectively.
    When Snakemake runs it will replace this wildcard variables with the actual values
 
 
