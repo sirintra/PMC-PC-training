@@ -50,7 +50,7 @@ Here is the list of partitions available on Kelvin2 and their constraints (as of
    Specify ``k2-medpri`` partition if your job needs to be run longer than 3 hours and would finish within 24 hours.
    
 
-To request a ``k2-medpri`` partition with a spefic runtime for your job, add the following lines into your job script:
+To request a ``k2-medpri`` partition with a specific runtime for your job, add the following lines into your job script:
 
 .. code-block:: bash
    
