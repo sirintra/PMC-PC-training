@@ -11,7 +11,7 @@ Module basics
 **************
 The ``module`` package is available on Kelvin2, allowing users to access non-standard tools or alternate versions of standard packages. This is also an alternative way to configure your environment as required by certain packages. Specific modules can be loaded and unloaded as required. 
 
-**Common commands**:
+**Common ``module`` commands**:
 
 ``module avail`` List available packages.
 
@@ -130,7 +130,7 @@ scontrol
 
 ``scontrol`` view or modify configuration (e.g. partition, node) and state of submitted jobs.
 
-Eaxmaple: To change a requested partion of a submitted job to ``k2-hipri`` (e.g. from ``k2-medpri``):
+Example: To change a requested partion of a submitted job to ``k2-hipri`` (e.g. from ``k2-medpri``):
 
 
 .. code-block:: console
