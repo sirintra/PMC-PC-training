@@ -17,8 +17,6 @@ A Snakemake workflow defines a data analysis in terms of `rules <https://snakema
 
 ``Snakefile`` refers to a file that is executed by Snakemake. This file usually contains a collection of Snakemake rules. 
 
-Snakemake follows Python syntax
-
 
 Example syntax of a ``Snakefile``:
 
