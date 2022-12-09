@@ -75,7 +75,7 @@ Target rule
 
 Target rule is the rule that Snakemake focuses on when executing a Snakefile. When a workflow is executed, Snakemake will focus on producing output/target(s) defined in the target rule by creating a sequence of jobs that are dependent on each other. 
 
-By default, if no target rule is specified, Snakemake will use the first rule of the snakefile as the target. In the nutshell, a target rule should define a collection of final outputs expected from the workflow.
+By default, if no target rule is specified, Snakemake will use the first rule of the Snakefile as the target. In the nutshell, a target rule should define a collection of final outputs expected from the workflow.
 
 Defining a target rule:
 
