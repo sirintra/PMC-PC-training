@@ -15,7 +15,7 @@ Two important concepts
 
 Images
 ======
-An image is analgous to a template. It is a read-only filesystem, from which many containers can be produced. When a container is created from an image, its content starts off identical to the image. Several containers created from the same image will initially have the same content, but may then diverge as the follow their own lifecycle.
+An image is analgous to a template. It is a read-only filesystem, from which many containers can be produced. When a container is created from an image, its content starts off identical to the image. Several containers created from the same image will initially have the same content, but may then diverge as they follow their own lifecycle.
 
 Singularity images consist of a read-only file (typically with .sif or .img extension). A Singularity image can be created with the ``singularity build`` command, either from a a `container recipe <https://docs.sylabs.io/guides/2.6/user-guide/container_recipes.html>`_ or from a container repository (e.g. `Docker Hub <https://hub.docker.com/>`_ , `BioContainers <https://biocontainers.pro/>`_).
 
