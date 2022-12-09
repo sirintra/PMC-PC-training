@@ -41,12 +41,12 @@ Example syntax of a ``Snakefile``:
 
 .. important::
 
-   Just like Python, correct indentation is important in Snakemake.
+   As Snakemake follows Python syntax, correct indentation is important.
    Snakemake uses the indentation to work out different components of each rule.   
    
 .. warning::
    
-   Like python, you can use either tabs or spaces for indentation (don’t use both!).
+   Just like python, you can use either tabs or spaces for indentation (don’t use both!).
    
    
 .. note::
