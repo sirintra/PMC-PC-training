@@ -1,12 +1,14 @@
 Introduction to Snakemake
 ##########################
 
-`Snakemake <https://snakemake.readthedocs.io/en/stable/index.html>`_ is a python-based workflow management system tool which allows a creation of reproducible and scalable data analyses. Snakemake has its own definition language that is an extension of Python with syntax to define rules and workflow specific properties. Snakemake workflows can scale from single-core workstations to multi-core server to compute clusters without modifying the workflow.
+`Snakemake <https://snakemake.readthedocs.io/en/stable/index.html>`_ is a python-based workflow management system tool which allows the creation of reproducible and scalable data analyses. Snakemake has its own definition language that is an extension of Python. It has additional syntax to define rules and workflow-specific properties. Snakemake workflows can scale from a single-core workstation, to a multi-core server, to large HPC clusters without modifying the workflow.
 
 Basic concept of Snakemake workflow 
 ************************************
 
-A Snakemake workflow is defined by specifying rules in a `Snakefile <https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html>`_. Rules decompose the workflow into small steps (for example, the application of a single tool) by specifying how to create sets of output files from sets of input files. Snakemake automatically determines the dependencies between the rules by matching file names.
+A Snakemake workflow is often required to execute multiple analysis tools over a large number of input files. Some anaysis tools will execute over the source data files, while others will need to execute further downstream, using intermediate files produced by the first set of tools. To manage this complexity, and to define an order in which operations must be performed, Snakemake has the concept of workflow rules `Snakefile <https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html>`_. 
+
+Rules allow you to break the logic of the overall workflow into small, managable steps. For example, a rule might describe the input requirements of a single command line tool, the command line parameters required in order to execute that tool, and the set of output files produced by the tool. Each step of the workflow is described by a rule definition. Then, Snakemake automatically determines the dependencies between the rules by matching the output filenames of one rule to the input requirements of one or more rules that should be executed downstream. Once the dependency tree (and therefore the run order requirements) of rules is known, Snakemake is able to orchestrate the execution of these rules in the correct order and with the correct level of parallelism to suit the execution environment, whether this happens to be a single desktop PC, or a large compute cluster.
 
 
 Basic workflow definition
