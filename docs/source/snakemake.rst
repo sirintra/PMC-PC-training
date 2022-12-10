@@ -75,7 +75,7 @@ Given a set of targets (outputs), Snakemake will find a composition of rules to 
 Target rule
 ************************************  
 
-A target rule is the rule that Snakemake focuses on when executing a Snakefile. When a workflow is executed, Snakemake will focus on producing output/target(s) defined in the target rule by creating a sequence of jobs that are dependent on each other. 
+A target rule is the rule that Snakemake focuses on when executing a Snakefile. When a workflow is executed, Snakemake will focus on producing output/target(s) defined in the target rule by creating a sequence of jobs that are dependent on each other. Multiple target rules can exist within a Snakemake file, but only one can be executed at a time. The target rule to be used can be specified as a command line parameter.
 
 By default, if no target rule is specified, Snakemake will use the first rule of the Snakefile as the target. In a nutshell, a target rule should define a collection of final outputs expected from the workflow.
 
@@ -142,7 +142,7 @@ Alternatively, ``input`` and ``output`` files can be assigned and referred to by
    It is important to have (single) quotation marks around each of the ``input`` and ``output`` paths. When there are multiple input files or multiple output files, it is also necessary to separate each of the file definitions with a comma ``,``.
 
 
-Run Snakemake workflow
+Run a Snakemake workflow
 ************************************
 
 To run a Snakemake workflow, type:
@@ -160,15 +160,18 @@ To run a Snakemake workflow, type:
 By default, Snakemake will execute jobs locally on the host machine where the ``snakemake`` command is executed. 
 To submit jobs to cluster, use the ``--cluster [submit_command]`` option. This allows Snakemake rules to run with a given submit command.
 
+You can tell Snakemake to submit jobs either in a blocking or asynchronous fashion. These modes result in slightly different behaviours. In "blocking" mode, the Snakemake command will stay running within your terminal until all workflow jobs have completed. In this mode, if the Snakemake process is interrupted (e.g. by closing the terminal, shutting down your desktop machine, or other disruption such as a network connection problem), then it has the effect of cancelling the Snakemake run.
 
-For example, to submit jobs to slurm:
+In "asynchronous" mode, Snakemake will submit all workflow jobs to Slurm and then immediately exit. In this mode, you are free to close the terminal, or shut down the PC, etc. Your workflow jobs will continue to execute within the cluster.
+
+To submit jobs to slurm in "blocking" mode, execute the following command. In this case, Snakemake will continue to run on your local computer until all jobs have finished executing on the cluster.
 
 .. code-block:: console
 
    snakemake -s [path_to_SnakeFile] --cluster "sbatch"
       
    
-Or to immediately submit all jobs to the cluster instead of waiting for present input files:
+Or to immediately submit all jobs to the cluster, in "asynchronous" mode, use the following command line. In this case, all jobs are submitted, and the Snakemake command exits immediately afterwards.
 
 .. code-block:: console
 
