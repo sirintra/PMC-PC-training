@@ -1,6 +1,6 @@
 About this course
 ===================================
-This course is designed for beginners who want to understand how the PanCancer (PC) and PC-HRD analysis workflows (`PanCancer_WF <https://github.com/PMC-QUB-HTS/PanCancer_WF/>`_, HRD_PC_WF <https://github.com/PMC-QUB-HTS/HRD_PC_WF/>`_) work. It is designed to provide trainees with short and straightforward hands-on sessions. 
+This course is designed for beginners who want to understand how the PanCancer (PC) and PC-HRD analysis workflows (`PanCancer_WF <https://github.com/PMC-QUB-HTS/PanCancer_WF/>`_, `HRD_PC_WF <https://github.com/PMC-QUB-HTS/HRD_PC_WF/>`_) work. It is designed to provide trainees with short and straightforward hands-on sessions. 
 
 The aims of the course are to provide:
 
