@@ -1,6 +1,25 @@
-Welcome to PMC-PC Training documentation!
-==========================================
+PMC Bioinformatics training course 
+###################################
 
+PanCancer_WF/HRD_PC_WF: Analysis workflow for the PanCancer panel sequencing data
+***********************************************************************
+
+
+Main instructor: 
+=================
+
+Sirintra Nakjang
+
+
+Contents
+=================
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+
+   about
+   git
+   kelvin
+   singularity
+   snakemake
+   pc_package
+
+
