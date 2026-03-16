@@ -23,3 +23,9 @@ exclude_patterns = ["_build"]
 
 # If your package imports heavy deps, mock them:
 autodoc_mock_imports = ["numpy", "pandas", "scipy", "sklearn"]
+
+# Required metadata for EPUB builds
+copyright = "2026, Sirintra Nakjang"
+version = "1.0"
+epub_version = "3"
+
