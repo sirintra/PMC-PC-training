@@ -28,6 +28,6 @@ autodoc_mock_imports = ["numpy", "pandas", "scipy", "sklearn"]
 # Required metadata for EPUB builds
 copyright = "2026, Sirintra Nakjang"
 version = "1.0"
-epub_version = 3
+epub_version = 3.0
 
 
