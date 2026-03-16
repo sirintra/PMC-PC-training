@@ -3,7 +3,9 @@ Introduction to Kelvin2 HPC
 Kelvin2 is a high-performance computing (HPC) cluster at Queen’s University Belfast (QUB). The operating system is currently CentOS Linux 7 (Core) and Slurm is currently used as a workload manager/job scheduler. The current hardware specifications are kept up-to-date `here <https://ni-hpc.ac.uk/Kelvin2/>`_
 
 
-Learn more from `latest Kelvin2 training <https://gitlab.qub.ac.uk/qub_hpc/kelvin_training>`_
+Learn more from:
+`latest Kelvin2 training <https://ni-hpc.ac.uk/Trainingandevents/>`_
+`NIHPC User Document <https://ni-hpc.github.io/nihpc-documentation/>`_
 
 
 
