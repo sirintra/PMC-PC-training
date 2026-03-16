@@ -4,7 +4,9 @@ Kelvin2 is a high-performance computing (HPC) cluster at Queen’s University Be
 
 
 Learn more from:
+
 `latest Kelvin2 training <https://ni-hpc.ac.uk/Trainingandevents/>`_
+
 `NIHPC User Document <https://ni-hpc.github.io/nihpc-documentation/>`_
 
 
