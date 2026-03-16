@@ -19,7 +19,7 @@ autosummary_generate = True
 templates_path = ["_templates"]
 exclude_patterns = ["_build"]
 
-html_theme = "furo"
+#html_theme = "furo"
 
 # If your package imports heavy deps, mock them:
 autodoc_mock_imports = ["numpy", "pandas", "scipy", "sklearn"]
