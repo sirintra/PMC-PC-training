@@ -69,8 +69,9 @@ The PanCancer workflow package has the following folder structure:
 .. code-block:: bash
   :linenos:
 
-  module load apps/singularity/3.4.2
-  module load snakemake/V5.31.1_Python3.8.5
+  module load apps/singularity/3.10.0
+  source activate /mnt/scratch2/pmc_apps/software/snakemake/conda/envs/snakemake==7.32.4
+  #module load snakemake/V5.31.1_Python3.8.5
   runID=$1
   sampSheet=$2
   platform=$3 #NovaSeq or NextSeq
@@ -78,5 +79,5 @@ The PanCancer workflow package has the following folder structure:
   runMode=slurm #node, testrun (i.e. Snakemake dry-run), or else (i.e. HPC)
   pathtobcl=kelvin #'kelvin' or 'path to bcl file'
   storage1=autofs/mcclayrds-instruments
-  libPath=/mnt/userapps/pmc_apps/lib
+  libPath=/mnt/scratch2/pmc_apps/lib
   bn=${PWD}/sys/src
